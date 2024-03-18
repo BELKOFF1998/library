@@ -5,7 +5,7 @@
 -- Dumped from database version 16.2
 -- Dumped by pg_dump version 16.2
 
--- Started on 2024-03-16 16:48:59
+-- Started on 2024-03-18 12:14:10
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,7 +29,7 @@ CREATE SCHEMA public;
 ALTER SCHEMA public OWNER TO pg_database_owner;
 
 --
--- TOC entry 4885 (class 0 OID 0)
+-- TOC entry 4883 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
 --
@@ -56,7 +56,7 @@ CREATE TABLE public."Post" (
 ALTER TABLE public."Post" OWNER TO postgres;
 
 --
--- TOC entry 4886 (class 0 OID 0)
+-- TOC entry 4884 (class 0 OID 0)
 -- Dependencies: 215
 -- Name: COLUMN "Post".post; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -65,7 +65,7 @@ COMMENT ON COLUMN public."Post".post IS 'название должности с�
 
 
 --
--- TOC entry 4887 (class 0 OID 0)
+-- TOC entry 4885 (class 0 OID 0)
 -- Dependencies: 215
 -- Name: COLUMN "Post".salary; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -105,7 +105,7 @@ CREATE TABLE public.author (
 ALTER TABLE public.author OWNER TO postgres;
 
 --
--- TOC entry 4888 (class 0 OID 0)
+-- TOC entry 4886 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: TABLE author; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -114,7 +114,7 @@ COMMENT ON TABLE public.author IS 'Таблица авторов книг';
 
 
 --
--- TOC entry 4889 (class 0 OID 0)
+-- TOC entry 4887 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: COLUMN author.birth_year; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -123,7 +123,7 @@ COMMENT ON COLUMN public.author.birth_year IS 'год рождения авто�
 
 
 --
--- TOC entry 4890 (class 0 OID 0)
+-- TOC entry 4888 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: COLUMN author.last_name; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -132,7 +132,7 @@ COMMENT ON COLUMN public.author.last_name IS 'фамилия автора';
 
 
 --
--- TOC entry 4891 (class 0 OID 0)
+-- TOC entry 4889 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: COLUMN author.first_name; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -141,12 +141,52 @@ COMMENT ON COLUMN public.author.first_name IS 'имя автора';
 
 
 --
--- TOC entry 4892 (class 0 OID 0)
+-- TOC entry 4890 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: COLUMN author.country; Type: COMMENT; Schema: public; Owner: postgres
 --
 
 COMMENT ON COLUMN public.author.country IS 'страна происхождения автора';
+
+
+--
+-- TOC entry 230 (class 1259 OID 16724)
+-- Name: author_book; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.author_book (
+    id_author integer NOT NULL,
+    id_book integer NOT NULL
+);
+
+
+ALTER TABLE public.author_book OWNER TO postgres;
+
+--
+-- TOC entry 4892 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: TABLE author_book; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON TABLE public.author_book IS 'таблица соответствий книг и авторов';
+
+
+--
+-- TOC entry 4893 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: COLUMN author_book.id_author; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.author_book.id_author IS 'ссылка на запись об авторе';
+
+
+--
+-- TOC entry 4894 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: COLUMN author_book.id_book; Type: COMMENT; Schema: public; Owner: postgres
+--
+
+COMMENT ON COLUMN public.author_book.id_book IS 'ссылка на запись о книге';
 
 
 --
@@ -156,62 +196,6 @@ COMMENT ON COLUMN public.author.country IS 'страна происхожден�
 
 ALTER TABLE public.author ALTER COLUMN id_author ADD GENERATED ALWAYS AS IDENTITY (
     SEQUENCE NAME public.author_id_author_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1
-);
-
-
---
--- TOC entry 231 (class 1259 OID 16724)
--- Name: author_list; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.author_list (
-    id_author_list integer NOT NULL,
-    id_author integer,
-    id_book integer
-);
-
-
-ALTER TABLE public.author_list OWNER TO postgres;
-
---
--- TOC entry 4894 (class 0 OID 0)
--- Dependencies: 231
--- Name: TABLE author_list; Type: COMMENT; Schema: public; Owner: postgres
---
-
-COMMENT ON TABLE public.author_list IS 'таблица соответствий книг и авторов';
-
-
---
--- TOC entry 4895 (class 0 OID 0)
--- Dependencies: 231
--- Name: COLUMN author_list.id_author; Type: COMMENT; Schema: public; Owner: postgres
---
-
-COMMENT ON COLUMN public.author_list.id_author IS 'ссылка на запись об авторе';
-
-
---
--- TOC entry 4896 (class 0 OID 0)
--- Dependencies: 231
--- Name: COLUMN author_list.id_book; Type: COMMENT; Schema: public; Owner: postgres
---
-
-COMMENT ON COLUMN public.author_list.id_book IS 'ссылка на запись о книге';
-
-
---
--- TOC entry 230 (class 1259 OID 16723)
--- Name: author_list_id_author_list_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-ALTER TABLE public.author_list ALTER COLUMN id_author_list ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME public.author_list_id_author_list_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -239,7 +223,7 @@ CREATE TABLE public.book (
 ALTER TABLE public.book OWNER TO postgres;
 
 --
--- TOC entry 4898 (class 0 OID 0)
+-- TOC entry 4896 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: TABLE book; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -248,7 +232,7 @@ COMMENT ON TABLE public.book IS 'Таблица книг, одна значен�
 
 
 --
--- TOC entry 4899 (class 0 OID 0)
+-- TOC entry 4897 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.book_name; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -257,7 +241,7 @@ COMMENT ON COLUMN public.book.book_name IS 'название книги';
 
 
 --
--- TOC entry 4900 (class 0 OID 0)
+-- TOC entry 4898 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.genre; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -266,7 +250,7 @@ COMMENT ON COLUMN public.book.genre IS 'жанр';
 
 
 --
--- TOC entry 4901 (class 0 OID 0)
+-- TOC entry 4899 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.pages_number; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -275,7 +259,7 @@ COMMENT ON COLUMN public.book.pages_number IS 'количество страни
 
 
 --
--- TOC entry 4902 (class 0 OID 0)
+-- TOC entry 4900 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.original_language; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -284,7 +268,7 @@ COMMENT ON COLUMN public.book.original_language IS 'язык оригинала 
 
 
 --
--- TOC entry 4903 (class 0 OID 0)
+-- TOC entry 4901 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.writing_year; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -293,7 +277,7 @@ COMMENT ON COLUMN public.book.writing_year IS 'год написания кни�
 
 
 --
--- TOC entry 4904 (class 0 OID 0)
+-- TOC entry 4902 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: COLUMN book.id_isbn; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -333,7 +317,7 @@ CREATE TABLE public.book_list (
 ALTER TABLE public.book_list OWNER TO postgres;
 
 --
--- TOC entry 4906 (class 0 OID 0)
+-- TOC entry 4904 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: TABLE book_list; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -342,7 +326,7 @@ COMMENT ON TABLE public.book_list IS 'вспомогательная табли�
 
 
 --
--- TOC entry 4907 (class 0 OID 0)
+-- TOC entry 4905 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN book_list.id_entry; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -351,7 +335,7 @@ COMMENT ON COLUMN public.book_list.id_entry IS 'номер записи';
 
 
 --
--- TOC entry 4908 (class 0 OID 0)
+-- TOC entry 4906 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN book_list.id_book; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -360,7 +344,7 @@ COMMENT ON COLUMN public.book_list.id_book IS 'номер книги, котор
 
 
 --
--- TOC entry 4909 (class 0 OID 0)
+-- TOC entry 4907 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN book_list.returned; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -369,7 +353,7 @@ COMMENT ON COLUMN public.book_list.returned IS 'метка обозначающ�
 
 
 --
--- TOC entry 4910 (class 0 OID 0)
+-- TOC entry 4908 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN book_list.return_data; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -406,7 +390,7 @@ CREATE TABLE public.employee (
 ALTER TABLE public.employee OWNER TO postgres;
 
 --
--- TOC entry 4912 (class 0 OID 0)
+-- TOC entry 4910 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: COLUMN employee.id_post; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -430,7 +414,7 @@ CREATE TABLE public.record (
 ALTER TABLE public.record OWNER TO postgres;
 
 --
--- TOC entry 4914 (class 0 OID 0)
+-- TOC entry 4912 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: COLUMN record.data; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -439,7 +423,7 @@ COMMENT ON COLUMN public.record.data IS 'время когда взяли кни
 
 
 --
--- TOC entry 4915 (class 0 OID 0)
+-- TOC entry 4913 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: COLUMN record.id_visitor; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -448,7 +432,7 @@ COMMENT ON COLUMN public.record.id_visitor IS 'ссылка на данные п
 
 
 --
--- TOC entry 4916 (class 0 OID 0)
+-- TOC entry 4914 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: COLUMN record.id_employee; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -488,7 +472,7 @@ CREATE TABLE public.isbn (
 ALTER TABLE public.isbn OWNER TO postgres;
 
 --
--- TOC entry 4919 (class 0 OID 0)
+-- TOC entry 4917 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: COLUMN isbn.publisher; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -497,7 +481,7 @@ COMMENT ON COLUMN public.isbn.publisher IS 'название издателя';
 
 
 --
--- TOC entry 4920 (class 0 OID 0)
+-- TOC entry 4918 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: COLUMN isbn.country; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -506,7 +490,7 @@ COMMENT ON COLUMN public.isbn.country IS 'страна в которой нах�
 
 
 --
--- TOC entry 4921 (class 0 OID 0)
+-- TOC entry 4919 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: COLUMN isbn.language; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -515,7 +499,7 @@ COMMENT ON COLUMN public.isbn.language IS 'язык на который пере
 
 
 --
--- TOC entry 4922 (class 0 OID 0)
+-- TOC entry 4920 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: COLUMN isbn.publication_year; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -539,7 +523,7 @@ CREATE TABLE public.pasport_details (
 ALTER TABLE public.pasport_details OWNER TO postgres;
 
 --
--- TOC entry 4924 (class 0 OID 0)
+-- TOC entry 4922 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: TABLE pasport_details; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -548,7 +532,7 @@ COMMENT ON TABLE public.pasport_details IS 'таблица паспортных 
 
 
 --
--- TOC entry 4925 (class 0 OID 0)
+-- TOC entry 4923 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: COLUMN pasport_details.series; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -557,7 +541,7 @@ COMMENT ON COLUMN public.pasport_details.series IS 'серия паспорта'
 
 
 --
--- TOC entry 4926 (class 0 OID 0)
+-- TOC entry 4924 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: COLUMN pasport_details.number; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -566,7 +550,7 @@ COMMENT ON COLUMN public.pasport_details.number IS 'номер паспорта'
 
 
 --
--- TOC entry 4927 (class 0 OID 0)
+-- TOC entry 4925 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: COLUMN pasport_details.departament_code; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -590,7 +574,7 @@ ALTER TABLE public.pasport_details ALTER COLUMN id_pasport ADD GENERATED ALWAYS 
 
 
 --
--- TOC entry 233 (class 1259 OID 16740)
+-- TOC entry 232 (class 1259 OID 16740)
 -- Name: person; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -606,8 +590,8 @@ CREATE TABLE public.person (
 ALTER TABLE public.person OWNER TO postgres;
 
 --
--- TOC entry 4929 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4927 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: TABLE person; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -615,8 +599,8 @@ COMMENT ON TABLE public.person IS 'таблица персональных да�
 
 
 --
--- TOC entry 4930 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4928 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: COLUMN person.last_name; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -624,8 +608,8 @@ COMMENT ON COLUMN public.person.last_name IS 'фамилия';
 
 
 --
--- TOC entry 4931 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4929 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: COLUMN person.first_name; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -633,8 +617,8 @@ COMMENT ON COLUMN public.person.first_name IS 'Имя';
 
 
 --
--- TOC entry 4932 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4930 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: COLUMN person.id_pasport; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -642,8 +626,8 @@ COMMENT ON COLUMN public.person.id_pasport IS 'ссылка на запись с
 
 
 --
--- TOC entry 4933 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4931 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: COLUMN person.birth_data; Type: COMMENT; Schema: public; Owner: postgres
 --
 
@@ -651,7 +635,7 @@ COMMENT ON COLUMN public.person.birth_data IS 'Дата рождения';
 
 
 --
--- TOC entry 232 (class 1259 OID 16739)
+-- TOC entry 231 (class 1259 OID 16739)
 -- Name: person_id_person_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -680,7 +664,7 @@ CREATE TABLE public.visitor (
 ALTER TABLE public.visitor OWNER TO postgres;
 
 --
--- TOC entry 4935 (class 0 OID 0)
+-- TOC entry 4933 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: COLUMN visitor.email; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -689,7 +673,7 @@ COMMENT ON COLUMN public.visitor.email IS 'электронная почта п�
 
 
 --
--- TOC entry 4936 (class 0 OID 0)
+-- TOC entry 4934 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: COLUMN visitor.phone_number; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -698,7 +682,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4861 (class 0 OID 16399)
+-- TOC entry 4860 (class 0 OID 16399)
 -- Dependencies: 215
 -- Data for Name: Post; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -706,7 +690,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4868 (class 0 OID 16524)
+-- TOC entry 4867 (class 0 OID 16524)
 -- Dependencies: 222
 -- Data for Name: author; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -714,15 +698,15 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4877 (class 0 OID 16724)
--- Dependencies: 231
--- Data for Name: author_list; Type: TABLE DATA; Schema: public; Owner: postgres
+-- TOC entry 4875 (class 0 OID 16724)
+-- Dependencies: 230
+-- Data for Name: author_book; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4862 (class 0 OID 16418)
+-- TOC entry 4861 (class 0 OID 16418)
 -- Dependencies: 216
 -- Data for Name: book; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -730,7 +714,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4867 (class 0 OID 16500)
+-- TOC entry 4866 (class 0 OID 16500)
 -- Dependencies: 221
 -- Data for Name: book_list; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -738,7 +722,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4865 (class 0 OID 16472)
+-- TOC entry 4864 (class 0 OID 16472)
 -- Dependencies: 219
 -- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -746,7 +730,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4869 (class 0 OID 16548)
+-- TOC entry 4868 (class 0 OID 16548)
 -- Dependencies: 223
 -- Data for Name: isbn; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -754,7 +738,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4870 (class 0 OID 16595)
+-- TOC entry 4869 (class 0 OID 16595)
 -- Dependencies: 224
 -- Data for Name: pasport_details; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -762,15 +746,15 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4879 (class 0 OID 16740)
--- Dependencies: 233
+-- TOC entry 4877 (class 0 OID 16740)
+-- Dependencies: 232
 -- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4866 (class 0 OID 16484)
+-- TOC entry 4865 (class 0 OID 16484)
 -- Dependencies: 220
 -- Data for Name: record; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -778,7 +762,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4863 (class 0 OID 16439)
+-- TOC entry 4862 (class 0 OID 16439)
 -- Dependencies: 217
 -- Data for Name: visitor; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -786,7 +770,7 @@ COMMENT ON COLUMN public.visitor.phone_number IS 'номер телефона п
 
 
 --
--- TOC entry 4938 (class 0 OID 0)
+-- TOC entry 4936 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: Post_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -795,7 +779,7 @@ SELECT pg_catalog.setval('public."Post_id_seq"', 1, false);
 
 
 --
--- TOC entry 4939 (class 0 OID 0)
+-- TOC entry 4937 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: author_id_author_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -804,16 +788,7 @@ SELECT pg_catalog.setval('public.author_id_author_seq', 1, false);
 
 
 --
--- TOC entry 4940 (class 0 OID 0)
--- Dependencies: 230
--- Name: author_list_id_author_list_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.author_list_id_author_list_seq', 1, false);
-
-
---
--- TOC entry 4941 (class 0 OID 0)
+-- TOC entry 4938 (class 0 OID 0)
 -- Dependencies: 227
 -- Name: book_id_book_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -822,7 +797,7 @@ SELECT pg_catalog.setval('public.book_id_book_seq', 1, false);
 
 
 --
--- TOC entry 4942 (class 0 OID 0)
+-- TOC entry 4939 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: book_list_id_book_list_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -831,7 +806,7 @@ SELECT pg_catalog.setval('public.book_list_id_book_list_seq', 1, false);
 
 
 --
--- TOC entry 4943 (class 0 OID 0)
+-- TOC entry 4940 (class 0 OID 0)
 -- Dependencies: 229
 -- Name: entry_id_entry_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -840,7 +815,7 @@ SELECT pg_catalog.setval('public.entry_id_entry_seq', 1, false);
 
 
 --
--- TOC entry 4944 (class 0 OID 0)
+-- TOC entry 4941 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: pasport_details_id_pasport_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -849,8 +824,8 @@ SELECT pg_catalog.setval('public.pasport_details_id_pasport_seq', 1, false);
 
 
 --
--- TOC entry 4945 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 4942 (class 0 OID 0)
+-- Dependencies: 231
 -- Name: person_id_person_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -858,16 +833,16 @@ SELECT pg_catalog.setval('public.person_id_person_seq', 1, false);
 
 
 --
--- TOC entry 4704 (class 2606 OID 16728)
--- Name: author_list author_list_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4703 (class 2606 OID 16775)
+-- Name: author_book author_book_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.author_list
-    ADD CONSTRAINT author_list_pk PRIMARY KEY (id_author_list);
+ALTER TABLE ONLY public.author_book
+    ADD CONSTRAINT author_book_pk PRIMARY KEY (id_author, id_book);
 
 
 --
--- TOC entry 4698 (class 2606 OID 16633)
+-- TOC entry 4697 (class 2606 OID 16633)
 -- Name: author author_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -876,7 +851,7 @@ ALTER TABLE ONLY public.author
 
 
 --
--- TOC entry 4696 (class 2606 OID 16711)
+-- TOC entry 4695 (class 2606 OID 16711)
 -- Name: book_list book_list_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -885,7 +860,7 @@ ALTER TABLE ONLY public.book_list
 
 
 --
--- TOC entry 4686 (class 2606 OID 16700)
+-- TOC entry 4685 (class 2606 OID 16700)
 -- Name: book book_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -894,7 +869,7 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 4688 (class 2606 OID 16647)
+-- TOC entry 4687 (class 2606 OID 16647)
 -- Name: book book_unique; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -903,7 +878,7 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 4692 (class 2606 OID 16758)
+-- TOC entry 4691 (class 2606 OID 16758)
 -- Name: employee employee_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -912,7 +887,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 4694 (class 2606 OID 16717)
+-- TOC entry 4693 (class 2606 OID 16717)
 -- Name: record entry_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -921,7 +896,7 @@ ALTER TABLE ONLY public.record
 
 
 --
--- TOC entry 4700 (class 2606 OID 16655)
+-- TOC entry 4699 (class 2606 OID 16655)
 -- Name: isbn isbn_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -930,7 +905,7 @@ ALTER TABLE ONLY public.isbn
 
 
 --
--- TOC entry 4702 (class 2606 OID 16683)
+-- TOC entry 4701 (class 2606 OID 16683)
 -- Name: pasport_details pasport_details_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -939,7 +914,7 @@ ALTER TABLE ONLY public.pasport_details
 
 
 --
--- TOC entry 4706 (class 2606 OID 16744)
+-- TOC entry 4705 (class 2606 OID 16744)
 -- Name: person person_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -948,7 +923,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 4684 (class 2606 OID 16470)
+-- TOC entry 4683 (class 2606 OID 16470)
 -- Name: Post post_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -957,7 +932,7 @@ ALTER TABLE ONLY public."Post"
 
 
 --
--- TOC entry 4690 (class 2606 OID 16751)
+-- TOC entry 4689 (class 2606 OID 16751)
 -- Name: visitor visitor_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -966,25 +941,25 @@ ALTER TABLE ONLY public.visitor
 
 
 --
--- TOC entry 4715 (class 2606 OID 16729)
--- Name: author_list author_list_author_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4714 (class 2606 OID 16729)
+-- Name: author_book author_list_author_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.author_list
+ALTER TABLE ONLY public.author_book
     ADD CONSTRAINT author_list_author_fk FOREIGN KEY (id_author) REFERENCES public.author(id_author);
 
 
 --
--- TOC entry 4716 (class 2606 OID 16734)
--- Name: author_list author_list_book_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4715 (class 2606 OID 16734)
+-- Name: author_book author_list_book_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.author_list
+ALTER TABLE ONLY public.author_book
     ADD CONSTRAINT author_list_book_fk FOREIGN KEY (id_book) REFERENCES public.book(id_book);
 
 
 --
--- TOC entry 4707 (class 2606 OID 16660)
+-- TOC entry 4706 (class 2606 OID 16660)
 -- Name: book book_isbn_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -993,7 +968,7 @@ ALTER TABLE ONLY public.book
 
 
 --
--- TOC entry 4713 (class 2606 OID 16701)
+-- TOC entry 4712 (class 2606 OID 16701)
 -- Name: book_list book_list_book_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1002,7 +977,7 @@ ALTER TABLE ONLY public.book_list
 
 
 --
--- TOC entry 4714 (class 2606 OID 16718)
+-- TOC entry 4713 (class 2606 OID 16718)
 -- Name: book_list book_list_entry_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1011,7 +986,7 @@ ALTER TABLE ONLY public.book_list
 
 
 --
--- TOC entry 4709 (class 2606 OID 16759)
+-- TOC entry 4708 (class 2606 OID 16759)
 -- Name: employee employee_person_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1020,7 +995,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 4710 (class 2606 OID 16515)
+-- TOC entry 4709 (class 2606 OID 16515)
 -- Name: employee employee_post_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1029,7 +1004,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 4717 (class 2606 OID 16745)
+-- TOC entry 4716 (class 2606 OID 16745)
 -- Name: person person_pasport_details_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1038,7 +1013,7 @@ ALTER TABLE ONLY public.person
 
 
 --
--- TOC entry 4711 (class 2606 OID 16769)
+-- TOC entry 4710 (class 2606 OID 16769)
 -- Name: record record_employee_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1047,7 +1022,7 @@ ALTER TABLE ONLY public.record
 
 
 --
--- TOC entry 4712 (class 2606 OID 16764)
+-- TOC entry 4711 (class 2606 OID 16764)
 -- Name: record record_visitor_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1056,7 +1031,7 @@ ALTER TABLE ONLY public.record
 
 
 --
--- TOC entry 4708 (class 2606 OID 16752)
+-- TOC entry 4707 (class 2606 OID 16752)
 -- Name: visitor visitor_person_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1065,7 +1040,7 @@ ALTER TABLE ONLY public.visitor
 
 
 --
--- TOC entry 4893 (class 0 OID 0)
+-- TOC entry 4891 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: TABLE author; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1075,16 +1050,16 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.author TO employee;
 
 
 --
--- TOC entry 4897 (class 0 OID 0)
--- Dependencies: 231
--- Name: TABLE author_list; Type: ACL; Schema: public; Owner: postgres
+-- TOC entry 4895 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: TABLE author_book; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT SELECT ON TABLE public.author_list TO employee;
+GRANT SELECT ON TABLE public.author_book TO employee;
 
 
 --
--- TOC entry 4905 (class 0 OID 0)
+-- TOC entry 4903 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: TABLE book; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1094,7 +1069,7 @@ GRANT SELECT,INSERT,DELETE,UPDATE ON TABLE public.book TO employee;
 
 
 --
--- TOC entry 4911 (class 0 OID 0)
+-- TOC entry 4909 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: TABLE book_list; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1104,7 +1079,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.book_list TO employee;
 
 
 --
--- TOC entry 4913 (class 0 OID 0)
+-- TOC entry 4911 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: TABLE employee; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1113,7 +1088,7 @@ GRANT SELECT ON TABLE public.employee TO employee;
 
 
 --
--- TOC entry 4917 (class 0 OID 0)
+-- TOC entry 4915 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: TABLE record; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1123,8 +1098,8 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.record TO employee;
 
 
 --
--- TOC entry 4918 (class 0 OID 0)
--- Dependencies: 220 4917
+-- TOC entry 4916 (class 0 OID 0)
+-- Dependencies: 220 4915
 -- Name: COLUMN record.id_record; Type: ACL; Schema: public; Owner: postgres
 --
 
@@ -1133,7 +1108,7 @@ GRANT SELECT(id_record) ON TABLE public.record TO employee;
 
 
 --
--- TOC entry 4923 (class 0 OID 0)
+-- TOC entry 4921 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: TABLE isbn; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1143,7 +1118,7 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.isbn TO employee;
 
 
 --
--- TOC entry 4928 (class 0 OID 0)
+-- TOC entry 4926 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: TABLE pasport_details; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1152,8 +1127,8 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.pasport_details TO employee;
 
 
 --
--- TOC entry 4934 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4932 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: TABLE person; Type: ACL; Schema: public; Owner: postgres
 --
 
@@ -1162,7 +1137,7 @@ GRANT SELECT ON TABLE public.person TO guest;
 
 
 --
--- TOC entry 4937 (class 0 OID 0)
+-- TOC entry 4935 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: TABLE visitor; Type: ACL; Schema: public; Owner: postgres
 --
@@ -1172,14 +1147,14 @@ GRANT SELECT,INSERT,UPDATE ON TABLE public.visitor TO employee;
 
 
 --
--- TOC entry 2085 (class 826 OID 16676)
+-- TOC entry 2084 (class 826 OID 16676)
 -- Name: DEFAULT PRIVILEGES FOR TABLES; Type: DEFAULT ACL; Schema: public; Owner: postgres
 --
 
 ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA public GRANT SELECT ON TABLES TO employee;
 
 
--- Completed on 2024-03-16 16:49:00
+-- Completed on 2024-03-18 12:14:11
 
 --
 -- PostgreSQL database dump complete
