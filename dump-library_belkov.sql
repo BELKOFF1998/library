@@ -309,7 +309,7 @@ CREATE TABLE libraryShema.book_list (
     id_entry integer NOT NULL,
     id_book integer NOT NULL,
     returned boolean DEFAULT false,
-    return_data date NOT NULL,
+    return_data date,
     id_book_list integer NOT NULL
 );
 
@@ -465,7 +465,8 @@ CREATE TABLE libraryShema.isbn (
     publisher character varying(50),
     country character varying(50),
     language character varying(50),
-    libraryShemaation_year integer
+    publication_year integer,
+    num integer
 );
 
 

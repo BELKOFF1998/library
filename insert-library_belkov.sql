@@ -2,119 +2,119 @@
 -- Data for Name: Post;
 --
 
-INSERT INTO public."Post" OVERRIDING SYSTEM VALUE VALUES (1, 'Библиотекарь', 35444);
-INSERT INTO public."Post" OVERRIDING SYSTEM VALUE VALUES (2, 'Библиограф', 37655);
-INSERT INTO public."Post" OVERRIDING SYSTEM VALUE VALUES (3, 'Детский библиотекарь', 34222);
+INSERT INTO libraryShema."Post" OVERRIDING SYSTEM VALUE VALUES (1, 'Библиотекарь', 35444);
+INSERT INTO libraryShema."Post" OVERRIDING SYSTEM VALUE VALUES (2, 'Библиограф', 37655);
+INSERT INTO libraryShema."Post" OVERRIDING SYSTEM VALUE VALUES (3, 'Детский библиотекарь', 34222);
 
 
 --
 -- Data for Name: author;
 --
 
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1821, 'Достоевский', 'Федор', 'Россия', 1);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1891, 'Булгаков', 'Михаил', 'Россия', 2);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1799, 'Пушкин', 'Александр', 'Россия', 3);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1809, 'Гоголь', 'Николай', 'Россия', 4);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1802, 'Дюма', 'Александр', 'Россия', 5);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Толстой', 'Лев', 'Россия', 6);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1860, 'Чехов', 'Антон', 'Россия', 7);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1897, 'Ильф', 'Илья', 'Украина', 8);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1902, 'Петров', 'Евгений', 'Россия', 9);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1818, 'Тургенев', 'Иван', 'Россия', 10);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1898, 'Мария Ремарк', 'Эрих', 'Германия', 11);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1859, 'Конан Дойль', 'Артур', 'Великобритания', 12);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1802, 'Гюго', 'Виктор', 'Франция', 13);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1925, 'Стругацкий', 'Аркадий', 'Грузия', 15);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1933, 'Стругацкий', 'Борис', 'Грузия', 16);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1876, 'Лондон', 'Джек', 'США', 17);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1899, 'Хемингуэй', 'Эрнест', 'США', 18);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Шолохов', 'Михаил', 'Россия', 19);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1890, 'Кристи', 'Агата', 'Великобритания', 20);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Толстой', 'Алексей', 'Россия', 21);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1814, 'Лермонтов', 'Михаил', 'Россия', 22);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1795, 'Грибоедов', 'Александр', 'Россия', 23);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1928, 'Пикуль', 'Валентин', 'Россия', 24);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Васильев', 'Борис', 'Россия', 25);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1835, 'Твен', 'Марк', 'США', 26);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1831, 'Лесков', 'Николай', 'Россия', 27);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1564, 'Шекспир', 'Уильям', 'Великобритания', 28);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1921, 'Лем', 'Станислав', 'Украина', 29);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1868, 'Горький', 'Максим', 'Россия', 30);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1929, 'Шукшин', 'Василий', 'Россия', 31);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1816, 'Бронте', 'Шарлотта', 'Великобритания', 32);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1812, 'Гончаров', 'Иван', 'Россия', 33);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1880, 'Грин', 'Александр', 'Россия', 34);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1891, 'Волков', 'Александр', 'Казахстан', 35);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Быков', 'Василь', 'Белорусь', 36);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1660, 'Дефо', 'Даниель', 'Великобритания', 37);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Носов', 'Николай', 'Украина', 38);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1954, 'Поляков', 'Юрий', 'Россия', 39);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1884, 'Беляев', 'Александр', 'Россия', 40);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1947, 'Коэльо', 'Пауло', 'Бразилия', 41);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1931, 'Семенов', 'Юлиан', 'Россия', 42);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1903, 'Оруэлл', 'Джордж', 'Индия', 43);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Ефремов', 'Иван', 'Россия', 44);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1823, 'Островский', 'Александр', 'Россия', 45);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1870, 'Куприн', 'Александр', 'Россия', 46);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1946, 'Филатов', 'Леонид', 'Россия', 47);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1920, 'Брэдбери', 'Рэй', 'США', 48);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1902, 'Каверин', 'Вениамин', 'Россия', 49);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1875, 'Манн', 'Томас', 'Германия', 50);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1890, 'Пастернак', 'Борис', 'Россия', 51);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1863, 'Обручев', 'Владимир', 'Россия', 52);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1915, 'Симонов', 'Константин', 'Россия', 53);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1897, 'Катаев', 'Валентин', 'Украина', 54);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1866, 'Уэллс', 'Герберт', 'Великобритания', 55);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1873, 'Шмелёв', 'Иван', 'Россия', 56);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1949, 'Мураками', 'Харуки', 'Япония', 57);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1904, 'Гайдар', 'Аркадий', 'Украина', 58);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1821, 'Некрасов', 'Николай', 'Украина', 59);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1896, 'Скотт Фицджеральд', 'Фрэнсис', 'США', 60);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1749, 'Вольфганг фон Гёте', 'Иоганн', 'Германия', 61);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1906, 'Белых', 'Григорий', 'Россия', 62);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Еремеев', 'Алексей', 'Россия', 63);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1927, 'Гарсиа Маркес', 'Габриэль', 'Колумбия', 64);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1895, 'Есенин', 'Сергей', 'Россия', 65);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1832, 'Кэрролл', 'Льюис', 'Великобритания', 66);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1877, 'Гессе', 'Герман', 'Германия', 67);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1896, 'Шварц', 'Евгений', 'Россия', 68);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1911, 'Рыбаков', 'Анатолий', 'Украина', 69);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1931, 'Вайнер', 'Аркадий', 'Россия', 70);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1938, 'Вайнер', 'Георгий', 'Россия', 71);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1952, 'Алексеев', 'Сергей', 'Россия', 72);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Кафка', 'Франц', 'Чехия', 73);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Богомолов', 'Владимир', 'Россия', 74);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1850, 'Льюис Стивенсон', 'Роберт', 'Великобритания', 75);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1854, 'Уайльд', 'Оскар', 'Ирландия', 76);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1871, 'Драйзер', 'Теодор', 'США', 77);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1937, 'Вампилов', 'Александр', 'Россия', 78);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1826, 'Салтыков-Щедрин', 'Михаил', 'Россия', 79);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1805, 'Христиан Андерсен', 'Ганс', 'Дания', 80);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1892, 'Паустовский', 'Константин', 'Россия', 81);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Гашек', 'Ярослав', 'Чехия', 82);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1935, 'Кизи', 'Кен', 'США', 83);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1769, 'Крылов', 'Иван', 'Россия', 84);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1913, 'Драгунский', 'Виктор', 'США', 85);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1900, 'де Сент-Экзюпери', 'Антуан', 'Франция', 86);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1880, 'Блок', 'Александр', 'Россия', 87);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Троепольский', 'Гавриил', 'Россия', 88);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1870, 'Бунин', 'Иван', 'Россия', 89);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1937, 'Распутин', 'Валентин', 'Россия', 90);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1934, 'Булычев', 'Кир', 'Россия', 91);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1865, 'Киплинг', 'Редьярд', 'Индия', 92);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1775, 'Остин', 'Джейн', 'Великобритания', 93);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Кассиль', 'Лев', 'Россия', 94);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1667, 'Свифт', 'Джонатан', 'Ирландия', 95);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1812, 'Диккенс', 'Чарльз', 'Великобритания', 96);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1783, 'Мари-Анри Бейль', 'Стендаль', 'Франция', 97);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1899, 'Набоков', 'Владимир', 'Россия', 98);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1919, 'Д. Сэлинджер', 'Джером', 'США', 99);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1900, 'Митчелл', 'Маргарет', 'США', 100);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (NULL, NULL, 'Гомер', 'Греция', 101);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1884, 'Замятин', 'Евгений', 'Россия', 102);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1928, 'Айтматов', 'Чингиз', 'Кыргызстан', 103);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1888, 'Макаренко', 'Антон', 'Украина', 104);
-INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Верн', 'Жюль', 'Франция', 14);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1821, 'Достоевский', 'Федор', 'Россия', 1);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1891, 'Булгаков', 'Михаил', 'Россия', 2);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1799, 'Пушкин', 'Александр', 'Россия', 3);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1809, 'Гоголь', 'Николай', 'Россия', 4);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1802, 'Дюма', 'Александр', 'Россия', 5);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Толстой', 'Лев', 'Россия', 6);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1860, 'Чехов', 'Антон', 'Россия', 7);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1897, 'Ильф', 'Илья', 'Украина', 8);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1902, 'Петров', 'Евгений', 'Россия', 9);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1818, 'Тургенев', 'Иван', 'Россия', 10);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1898, 'Мария Ремарк', 'Эрих', 'Германия', 11);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1859, 'Конан Дойль', 'Артур', 'Великобритания', 12);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1802, 'Гюго', 'Виктор', 'Франция', 13);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1925, 'Стругацкий', 'Аркадий', 'Грузия', 15);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1933, 'Стругацкий', 'Борис', 'Грузия', 16);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1876, 'Лондон', 'Джек', 'США', 17);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1899, 'Хемингуэй', 'Эрнест', 'США', 18);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Шолохов', 'Михаил', 'Россия', 19);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1890, 'Кристи', 'Агата', 'Великобритания', 20);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Толстой', 'Алексей', 'Россия', 21);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1814, 'Лермонтов', 'Михаил', 'Россия', 22);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1795, 'Грибоедов', 'Александр', 'Россия', 23);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1928, 'Пикуль', 'Валентин', 'Россия', 24);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Васильев', 'Борис', 'Россия', 25);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1835, 'Твен', 'Марк', 'США', 26);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1831, 'Лесков', 'Николай', 'Россия', 27);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1564, 'Шекспир', 'Уильям', 'Великобритания', 28);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1921, 'Лем', 'Станислав', 'Украина', 29);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1868, 'Горький', 'Максим', 'Россия', 30);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1929, 'Шукшин', 'Василий', 'Россия', 31);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1816, 'Бронте', 'Шарлотта', 'Великобритания', 32);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1812, 'Гончаров', 'Иван', 'Россия', 33);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1880, 'Грин', 'Александр', 'Россия', 34);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1891, 'Волков', 'Александр', 'Казахстан', 35);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Быков', 'Василь', 'Белорусь', 36);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1660, 'Дефо', 'Даниель', 'Великобритания', 37);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Носов', 'Николай', 'Украина', 38);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1954, 'Поляков', 'Юрий', 'Россия', 39);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1884, 'Беляев', 'Александр', 'Россия', 40);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1947, 'Коэльо', 'Пауло', 'Бразилия', 41);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1931, 'Семенов', 'Юлиан', 'Россия', 42);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1903, 'Оруэлл', 'Джордж', 'Индия', 43);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Ефремов', 'Иван', 'Россия', 44);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1823, 'Островский', 'Александр', 'Россия', 45);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1870, 'Куприн', 'Александр', 'Россия', 46);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1946, 'Филатов', 'Леонид', 'Россия', 47);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1920, 'Брэдбери', 'Рэй', 'США', 48);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1902, 'Каверин', 'Вениамин', 'Россия', 49);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1875, 'Манн', 'Томас', 'Германия', 50);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1890, 'Пастернак', 'Борис', 'Россия', 51);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1863, 'Обручев', 'Владимир', 'Россия', 52);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1915, 'Симонов', 'Константин', 'Россия', 53);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1897, 'Катаев', 'Валентин', 'Украина', 54);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1866, 'Уэллс', 'Герберт', 'Великобритания', 55);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1873, 'Шмелёв', 'Иван', 'Россия', 56);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1949, 'Мураками', 'Харуки', 'Япония', 57);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1904, 'Гайдар', 'Аркадий', 'Украина', 58);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1821, 'Некрасов', 'Николай', 'Украина', 59);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1896, 'Скотт Фицджеральд', 'Фрэнсис', 'США', 60);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1749, 'Вольфганг фон Гёте', 'Иоганн', 'Германия', 61);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1906, 'Белых', 'Григорий', 'Россия', 62);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1908, 'Еремеев', 'Алексей', 'Россия', 63);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1927, 'Гарсиа Маркес', 'Габриэль', 'Колумбия', 64);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1895, 'Есенин', 'Сергей', 'Россия', 65);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1832, 'Кэрролл', 'Льюис', 'Великобритания', 66);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1877, 'Гессе', 'Герман', 'Германия', 67);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1896, 'Шварц', 'Евгений', 'Россия', 68);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1911, 'Рыбаков', 'Анатолий', 'Украина', 69);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1931, 'Вайнер', 'Аркадий', 'Россия', 70);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1938, 'Вайнер', 'Георгий', 'Россия', 71);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1952, 'Алексеев', 'Сергей', 'Россия', 72);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Кафка', 'Франц', 'Чехия', 73);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Богомолов', 'Владимир', 'Россия', 74);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1850, 'Льюис Стивенсон', 'Роберт', 'Великобритания', 75);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1854, 'Уайльд', 'Оскар', 'Ирландия', 76);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1871, 'Драйзер', 'Теодор', 'США', 77);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1937, 'Вампилов', 'Александр', 'Россия', 78);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1826, 'Салтыков-Щедрин', 'Михаил', 'Россия', 79);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1805, 'Христиан Андерсен', 'Ганс', 'Дания', 80);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1892, 'Паустовский', 'Константин', 'Россия', 81);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Гашек', 'Ярослав', 'Чехия', 82);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1935, 'Кизи', 'Кен', 'США', 83);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1769, 'Крылов', 'Иван', 'Россия', 84);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1913, 'Драгунский', 'Виктор', 'США', 85);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1900, 'де Сент-Экзюпери', 'Антуан', 'Франция', 86);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1880, 'Блок', 'Александр', 'Россия', 87);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Троепольский', 'Гавриил', 'Россия', 88);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1870, 'Бунин', 'Иван', 'Россия', 89);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1937, 'Распутин', 'Валентин', 'Россия', 90);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1934, 'Булычев', 'Кир', 'Россия', 91);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1865, 'Киплинг', 'Редьярд', 'Индия', 92);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1775, 'Остин', 'Джейн', 'Великобритания', 93);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1905, 'Кассиль', 'Лев', 'Россия', 94);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1667, 'Свифт', 'Джонатан', 'Ирландия', 95);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1812, 'Диккенс', 'Чарльз', 'Великобритания', 96);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1783, 'Мари-Анри Бейль', 'Стендаль', 'Франция', 97);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1899, 'Набоков', 'Владимир', 'Россия', 98);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1919, 'Д. Сэлинджер', 'Джером', 'США', 99);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1900, 'Митчелл', 'Маргарет', 'США', 100);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (NULL, NULL, 'Гомер', 'Греция', 101);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1884, 'Замятин', 'Евгений', 'Россия', 102);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1928, 'Айтматов', 'Чингиз', 'Кыргызстан', 103);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1888, 'Макаренко', 'Антон', 'Украина', 104);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Верн', 'Жюль', 'Франция', 14);
 
 
 --
@@ -122,447 +122,182 @@ INSERT INTO public.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Верн', 'Ж�
 -- Data for Name: author_book;
 --
 
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 1);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 2);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 3);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 4);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 5);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 6);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 7);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 8);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (1, 9);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (2, 10);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (2, 11);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (2, 12);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (2, 13);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (2, 14);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (3, 15);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (3, 16);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (3, 17);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (3, 18);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 19);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 20);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 21);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 22);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 23);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 24);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (4, 25);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 26);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 27);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 28);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 29);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 30);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 31);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 32);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 33);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 34);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (5, 35);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 36);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 37);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 38);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 39);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 40);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 41);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 42);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 43);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 44);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (6, 45);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 46);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 47);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 48);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 49);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 50);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 51);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 52);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 53);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 54);
-INSERT INTO public.author_book OVERRIDING SYSTEM VALUE VALUES (7, 55);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 1);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 2);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 3);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 4);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 5);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 6);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 7);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 8);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (1, 9);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (2, 10);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (2, 11);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (2, 12);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (2, 13);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (2, 14);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (3, 15);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (3, 16);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (3, 17);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (3, 18);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 19);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 20);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 21);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 22);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 23);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 24);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (4, 25);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 26);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 27);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 28);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 29);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 30);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 31);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 32);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 33);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 34);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (5, 35);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 36);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 37);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 38);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 39);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 40);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 41);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 42);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 43);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 44);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (6, 45);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 46);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 47);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 48);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 49);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 50);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 51);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 52);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 53);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 54);
+INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 55);
 
 
 --
 -- TOC entry 4861 (class 0 OID 16418)
 -- Dependencies: 216
--- Data for Name: book; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: book; Type: TABLE DATA; Schema: libraryShema; Owner: postgres
 --
 
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Преступление и наказание', 'Философия', 234, 'Русский', 1866, 'ISBN 645-9-2548-8173-3', 1);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Село Степанчиково и его обитатели', 'Сатира', 100, 'Русский', 1859, 'ISBN 575-3-3477-4317-4', 2);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Братья Карамазовы', 'Драма', 255, 'Русский', 1879, 'ISBN 100-8-3203-7564-8', 3);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Идиот', 'Философия', 295, 'Русский', 1869, 'ISBN 506-4-3029-1979-3', 4);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Униженные и оскорблённые', 'Психология', 195, 'Русский', 1861, 'ISBN 624-8-5817-8689-1', 5);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Подросток', 'Психология', 124, 'Русский', 1875, 'ISBN 914-4-3605-2837-2', 6);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Бесы', 'Психология', 324, 'Русский', 1872, 'ISBN 132-7-7602-9481-4', 7);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Игрок', 'Классика', 354, 'Русский', 1866, 'ISBN 401-4-6190-5730-4', 8);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Бедные люди', 'Классика', 112, 'Русский', 1845, 'ISBN 544-2-9186-2579-5', 9);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Мастер и Маргарита', 'Сатира', 402, 'Русский', 1940, 'ISBN 990-8-7521-4525-2', 10);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Собачье сердце', 'Сатира', 366, 'Русский', 1925, 'ISBN 452-8-6749-5612-1', 11);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Белая гвардия', 'История', 322, 'Русский', 1924, 'ISBN 367-8-9413-6105-8', 12);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Записки юного врача', 'Сборник', 312, 'Русский', 1926, 'ISBN 355-4-3960-7095-8', 13);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Морфий', 'Повесть', 222, 'Русский', 1926, 'ISBN 303-7-7014-4435-4', 14);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Евгений Онегин', 'Поэма', 240, 'Русский', 1837, 'ISBN 127-2-6744-6596-6', 15);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Повести Белкина', 'Повесть', 222, 'Русский', 1831, 'ISBN 137-9-4417-5312-1', 16);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Дубровский', 'Драма', 252, 'Русский', 1842, 'ISBN 645-6-2087-9561-9', 17);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Капитанская дочка', 'Драма', 333, 'Русский', 1836, 'ISBN 684-1-8901-2133-6', 18);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Мёртвые души', 'Поэма', 240, 'Русский', 1842, 'ISBN 143-5-2671-9005-2', 19);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Ревизор', 'Комедия', 290, 'Русский', 1836, 'ISBN 805-7-1032-7977-1', 20);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Вечера на хуторе близ Диканьки', 'Повесть', 250, 'Русский', 1832, 'ISBN 670-6-1096-8814-5', 21);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Тарас Бульба', 'Повесть', 340, 'Русский', 1835, 'ISBN 809-6-2644-4752-8', 22);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Шинель', 'Повесть', 270, 'Русский', 1842, 'ISBN 427-9-2315-2292-6', 23);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Вий', 'Сказка', 292, 'Русский', 1835, 'ISBN 858-8-1472-6749-6', 24);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Петербургские повести', 'Повесть', 370, 'Русский', 1842, 'ISBN 108-2-3189-5104-3', 25);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Граф Монте-Кристо', 'Приключение', 331, 'Французкий', 1845, 'ISBN 309-2-4804-2264-9', 26);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Три мушкетера', 'Приключение', 322, 'Французкий', 1844, 'ISBN 735-3-1084-4309-3', 27);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Виконт де Бражелон, или Десять лет спустя', 'Приключение', 366, 'Французкий', 1850, 'ISBN 953-9-6731-5137-2', 28);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Двадцать лет спустя', 'Приключение', 270, 'Французкий', 1845, 'ISBN 226-9-6007-3447-4', 29);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Графиня де Монсоро', 'Приключение', 250, 'Французкий', 1846, 'ISBN 222-9-6207-5429-9', 30);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Сорок пять', 'Приключение', 390, 'Французкий', 1848, 'ISBN 164-1-4609-9858-1', 31);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Королева Марго', 'Приключение', 270, 'Французкий', 1845, 'ISBN 324-7-6562-8384-7', 32);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Черный тюльпан', 'Роман', 254, 'Французкий', 1850, 'ISBN 384-6-3784-4473-6', 33);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Две Дианы', 'Драма', 322, 'Французкий', 1847, 'ISBN 654-5-4810-7706-9', 34);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Асканио', 'Приключение', 354, 'Французкий', 1843, 'ISBN 916-3-8604-3979-2', 35);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Война и мир', 'Классика', 454, 'Русский', 1868, 'ISBN 848-7-4671-6221-6', 36);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Воскресение', 'Роман', 324, 'Русский', 1899, 'ISBN 990-4-6623-6384-3', 37);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Анна Каренина', 'Классика', 254, 'Русский', 1877, 'ISBN 412-3-8681-7929-7', 38);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Детство. Отрочество. Юность', 'Автобиография', 314, 'Русский', 1857, 'ISBN 489-4-5436-4411-5', 39);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Хаджи-Мурат', 'Повесть', 274, 'Русский', 1904, 'ISBN 654-7-9198-2986-8', 40);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Кавказский пленник', 'Детская литература', 165, 'Русский', 1872, 'ISBN 843-5-2591-4647-6', 41);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Севастопольские рассказы', 'Драма', 354, 'Русский', 1855, 'ISBN 739-4-8295-5992-9', 42);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Крейцерова соната', 'Драма', 254, 'Русский', 1889, 'ISBN 380-3-9913-8296-6', 43);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Казаки', 'Повесть', 341, 'Русский', 1863, 'ISBN 339-1-3117-9734-9', 44);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Отец Сергий', 'Повесть', 312, 'Русский', 1911, 'ISBN 707-1-2143-4813-3', 45);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Палата № 6', 'Повесть', 344, 'Русский', 1892, 'ISBN 881-7-4829-6238-1', 46);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Драма на охоте', 'Повесть', 341, 'Русский', 1885, 'ISBN 951-4-8830-2232-6', 47);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Рассказы', 'Сборник', 295, 'Русский', 1885, 'ISBN 758-7-3077-7065-8', 48);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Вишневый сад', 'Комедия', 312, 'Русский', 1903, 'ISBN 485-5-3342-7322-4', 49);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Дядя Ваня', 'Драма', 352, 'Русский', 1896, 'ISBN 290-1-7925-4472-1', 50);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Чайка', 'Комедия', 254, 'Русский', 1896, 'ISBN 298-1-6839-2294-1', 51);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Три сестры', 'Драма', 242, 'Русский', 1900, 'ISBN 109-3-1577-7853-9', 52);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Дама с собачкой', 'Рассказ', 212, 'Русский', 1899, 'ISBN 485-6-9594-3975-8', 53);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Архиерей', 'Рассказ', 212, 'Русский', 1902, 'ISBN 213-3-3342-3496-5', 54);
-INSERT INTO public.book OVERRIDING SYSTEM VALUE VALUES ('Каштанка', 'Детская литература', 292, 'Русский', 1887, 'ISBN 397-9-5810-5686-2', 55);
-
-
---
--- TOC entry 4866 (class 0 OID 16500)
--- Dependencies: 221
--- Data for Name: book_list; Type: TABLE DATA; Schema: public; Owner: postgres
---
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Преступление и наказание', 'Философия', 234, 'Русский', 1866, NULL , 1);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Село Степанчиково и его обитатели', 'Сатира', 100, 'Русский', 1859, NULL, 2);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Братья Карамазовы', 'Драма', 255, 'Русский', 1879, NULL, 3);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Идиот', 'Философия', 295, 'Русский', 1869, NULL, 4);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Униженные и оскорблённые', 'Психология', 195, 'Русский', 1861, NULL, 5);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Подросток', 'Психология', 124, 'Русский', 1875, NULL, 6);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бесы', 'Психология', 324, 'Русский', 1872, NULL, 7);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Игрок', 'Классика', 354, 'Русский', 1866, NULL, 8);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бедные люди', 'Классика', 112, 'Русский', 1845, NULL, 9);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мастер и Маргарита', 'Сатира', 402, 'Русский', 1940, NULL, 10);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Собачье сердце', 'Сатира', 366, 'Русский', 1925, NULL, 11);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Белая гвардия', 'История', 322, 'Русский', 1924, NULL, 12);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Записки юного врача', 'Сборник', 312, 'Русский', 1926, NULL, 13);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Морфий', 'Повесть', 222, 'Русский', 1926, NULL, 14);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Евгений Онегин', 'Поэма', 240, 'Русский', 1837, NULL, 15);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Повести Белкина', 'Повесть', 222, 'Русский', 1831, NULL, 16);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дубровский', 'Драма', 252, 'Русский', 1842, NULL, 17);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Капитанская дочка', 'Драма', 333, 'Русский', 1836, NULL, 18);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мёртвые души', 'Поэма', 240, 'Русский', 1842, NULL, 19);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Ревизор', 'Комедия', 290, 'Русский', 1836, NULL, 20);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вечера на хуторе близ Диканьки', 'Повесть', 250, 'Русский', 1832, NULL, 21);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Тарас Бульба', 'Повесть', 340, 'Русский', 1835, NULL, 22);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Шинель', 'Повесть', 270, 'Русский', 1842, NULL, 23);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вий', 'Сказка', 292, 'Русский', 1835, NULL, 24);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Петербургские повести', 'Повесть', 370, 'Русский', 1842, NULL, 25);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Граф Монте-Кристо', 'Приключение', 331, 'Французкий', 1845, NULL, 26);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три мушкетера', 'Приключение', 322, 'Французкий', 1844, NULL, 27);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Виконт де Бражелон, или Десять лет спустя', 'Приключение', 366, 'Французкий', 1850, NULL, 28);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Двадцать лет спустя', 'Приключение', 270, 'Французкий', 1845, NULL, 29);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Графиня де Монсоро', 'Приключение', 250, 'Французкий', 1846, NULL, 30);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Сорок пять', 'Приключение', 390, 'Французкий', 1848, NULL, 31);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Королева Марго', 'Приключение', 270, 'Французкий', 1845, NULL, 32);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Черный тюльпан', 'Роман', 254, 'Французкий', 1850, NULL, 33);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Две Дианы', 'Драма', 322, 'Французкий', 1847, NULL, 34);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Асканио', 'Приключение', 354, 'Французкий', 1843, NULL, 35);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Война и мир', 'Классика', 454, 'Русский', 1868, NULL, 36);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Воскресение', 'Роман', 324, 'Русский', 1899, NULL, 37);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Анна Каренина', 'Классика', 254, 'Русский', 1877, NULL, 38);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Детство. Отрочество. Юность', 'Автобиография', 314, 'Русский', 1857, NULL, 39);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Хаджи-Мурат', 'Повесть', 274, 'Русский', 1904, NULL, 40);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Кавказский пленник', 'Детская литература', 165, 'Русский', 1872, NULL, 41);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Севастопольские рассказы', 'Драма', 354, 'Русский', 1855, NULL, 42);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Крейцерова соната', 'Драма', 254, 'Русский', 1889, NULL, 43);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Казаки', 'Повесть', 341, 'Русский', 1863, NULL, 44);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Отец Сергий', 'Повесть', 312, 'Русский', 1911, NULL, 45);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Палата № 6', 'Повесть', 344, 'Русский', 1892, NULL, 46);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Драма на охоте', 'Повесть', 341, 'Русский', 1885, NULL, 47);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Рассказы', 'Сборник', 295, 'Русский', 1885, NULL, 48);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вишневый сад', 'Комедия', 312, 'Русский', 1903, NULL, 49);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дядя Ваня', 'Драма', 352, 'Русский', 1896, NULL, 50);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Чайка', 'Комедия', 254, 'Русский', 1896, NULL, 51);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три сестры', 'Драма', 242, 'Русский', 1900, NULL, 52);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дама с собачкой', 'Рассказ', 212, 'Русский', 1899, NULL, 53);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Архиерей', 'Рассказ', 212, 'Русский', 1902, NULL, 54);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Каштанка', 'Детская литература', 292, 'Русский', 1887, NULL, 55);
 
 
 
---
+
+-- СЛУЧАЙНЫЕ ДОЛЖНОСТИ ДЛЯ 7 ЛЮДЕЙ
 -- Data for Name: employee;
 -- 7
 
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (1, 1);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (1, 2);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (2, 3);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (3, 4);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (2, 5);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (1, 6);
-INSERT INTO public.employee OVERRIDING SYSTEM VALUE VALUES (1, 7);
+INSERT INTO libraryShema.employee OVERRIDING SYSTEM VALUE VALUES (floor(random()*(3-1+1))+1, generate_series(1,7,1));
 
 
---
+-- ГЕНЕРАЦИЯ ISBN 
 -- Data for Name: isbn;
+-- 
 -- 55
 
-INSERT INTO public.isbn VALUES ('ISBN 645-9-2548-8173-3', 'Издательство АСТ', 'Россия', 'Русский', 2007);
-INSERT INTO public.isbn VALUES ('ISBN 575-3-3477-4317-4', 'Издательство ЭКСМО', 'Россия', 'Русский', 2001);
-INSERT INTO public.isbn VALUES ('ISBN 100-8-3203-7564-8', 'Издательство АСТ', 'Россия', 'Русский', 2021);
-INSERT INTO public.isbn VALUES ('ISBN 506-4-3029-1979-3', 'Издательство АСТ', 'Россия', 'Русский', 2004);
-INSERT INTO public.isbn VALUES ('ISBN 624-8-5817-8689-1', 'Издательство АСТ', 'Россия', 'Русский', 2012);
-INSERT INTO public.isbn VALUES ('ISBN 914-4-3605-2837-2', 'Издательство АСТ', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 132-7-7602-9481-4', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 401-4-6190-5730-4', 'Издательство АСТ', 'Россия', 'Русский', 2014);
-INSERT INTO public.isbn VALUES ('ISBN 544-2-9186-2579-5', 'Издательство «МИФ»', 'Россия', 'Русский', 2011);
-INSERT INTO public.isbn VALUES ('ISBN 990-8-7521-4525-2', 'Издательство «МИФ»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 452-8-6749-5612-1', 'Издательство «МИФ»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 367-8-9413-6105-8', 'Издательство «МИФ»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 355-4-3960-7095-8', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 303-7-7014-4435-4', 'Издательство АСТ', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 127-2-6744-6596-6', 'Издательство «Азбука»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 137-9-4417-5312-1', 'Издательство «МИФ»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 645-6-2087-9561-9', 'Издательство «Азбука»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 684-1-8901-2133-6', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 143-5-2671-9005-2', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 805-7-1032-7977-1', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 670-6-1096-8814-5', 'Издательство «Азбука»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 809-6-2644-4752-8', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 427-9-2315-2292-6', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 858-8-1472-6749-6', 'Издательство АСТ', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 108-2-3189-5104-3', 'Издательство АСТ', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 309-2-4804-2264-9', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 735-3-1084-4309-3', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 953-9-6731-5137-2', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 226-9-6007-3447-4', 'Издательство АСТ', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 222-9-6207-5429-9', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 164-1-4609-9858-1', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 324-7-6562-8384-7', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 384-6-3784-4473-6', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 654-5-4810-7706-9', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 916-3-8604-3979-2', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 848-7-4671-6221-6', 'Издательство «Азбука»', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 990-4-6623-6384-3', 'Издательство ЭКСМО', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 412-3-8681-7929-7', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 489-4-5436-4411-5', 'Издательство ЭКСМО', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 654-7-9198-2986-8', 'Издательство ЭКСМО', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 843-5-2591-4647-6', 'Издательство «МИФ»', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 739-4-8295-5992-9', 'Издательство ЭКСМО', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 380-3-9913-8296-6', 'Издательство «МИФ»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 339-1-3117-9734-9', 'Издательство «Азбука»', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 707-1-2143-4813-3', 'Издательство ЭКСМО', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 881-7-4829-6238-1', 'Издательство АСТ', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 951-4-8830-2232-6', 'Издательство АСТ', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 758-7-3077-7065-8', 'Издательство АСТ', 'Россия', 'Русский', 2020);
-INSERT INTO public.isbn VALUES ('ISBN 485-5-3342-7322-4', 'Издательство ЭКСМО', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 290-1-7925-4472-1', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 298-1-6839-2294-1', 'Издательство «МИФ»', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 109-3-1577-7853-9', 'Издательство «Азбука»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 485-6-9594-3975-8', 'Издательство АСТ', 'Россия', 'Русский', 2016);
-INSERT INTO public.isbn VALUES ('ISBN 213-3-3342-3496-5', 'Издательство «Азбука»', 'Россия', 'Русский', 2015);
-INSERT INTO public.isbn VALUES ('ISBN 397-9-5810-5686-2', 'Издательство «МИФ»', 'Россия', 'Русский', 2016);
+INSERT INTO libraryShema.isbn VALUES ( 
+CAST('ISBN '||floor(random()*(999-100+1))+100||'-'||floor(random()*(9-1+1))+1||'-'||floor(random()*(9999-1000+1))+1000||'-'||floor(random()*(9999-1000+1))+1000||'-'||floor(random()*(9-1+1))+1 AS varchar(30)),
+CAST(floor(random()*(4-1+1))+1 AS varchar(50)),
+'Россия',
+'Русский',
+floor(random()*(2023-1998+1))+1998,
+generate_series(1,55,1));
 
+
+
+-- ВСТАВКА СЛУЧАЙНЫХ НАЗВАНИЙ ИЗДАТЕЛЕЙ
+ 
+update isbn
+SET publisher = 'Издательство АСТ'
+WHERE publisher = '1';
+
+update isbn
+SET publisher = 'Издательство ЭКСМО'
+WHERE publisher = '2';
+
+update isbn
+SET publisher = 'Издательство МИФ'
+WHERE publisher = '3';
+
+update isbn
+SET publisher = 'Издательство АЗБУКА'
+WHERE publisher = '4';
+
+--ВСТАВКА СГЕНЕРИРОВАННЫХ ISBN В ТАБЛИЦУ КНИГ
+
+update book
+set id_isbn = (select isbn.id_isbn from isbn where isbn.num = book.id_book);
 
 --
 -- Data for Name: pasport_details;
 --235
 
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-20', '4874', '821-524', 1);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-16', '4342', '938-771', 2);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-16', '7405', '482-684', 3);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-22', '8204', '142-689', 4);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-13', '3424', '550-158', 5);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '2801', '299-746', 6);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-15', '3970', '237-751', 7);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-14', '4386', '698-980', 8);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-18', '7864', '832-344', 9);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-18', '6048', '699-886', 10);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-13', '2087', '890-121', 11);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-18', '9194', '531-479', 12);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-22', '4638', '346-790', 13);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-18', '3509', '818-391', 14);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-22', '2750', '865-792', 15);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-10', '9788', '529-623', 16);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-17', '7164', '374-770', 17);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-20', '7207', '971-882', 18);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-20', '9201', '222-883', 19);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-11', '3262', '761-302', 20);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-16', '4990', '700-286', 21);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-16', '6347', '894-839', 22);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-21', '5434', '417-407', 23);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-17', '7668', '157-356', 24);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-22', '4285', '313-785', 25);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-20', '5336', '184-233', 26);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-15', '5190', '415-212', 27);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-17', '6227', '239-819', 28);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-19', '7286', '158-537', 29);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-22', '6192', '919-132', 30);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-10', '8429', '558-259', 31);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-15', '7073', '256-426', 32);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-12', '7711', '242-944', 33);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-14', '5248', '159-438', 34);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-22', '3062', '791-903', 35);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-16', '7917', '425-749', 36);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-13', '3504', '348-831', 37);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-17', '6642', '951-550', 38);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-22', '9422', '778-267', 39);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-20', '6042', '519-803', 40);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-12', '2874', '177-574', 41);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-12', '5424', '399-487', 42);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-22', '8468', '998-834', 43);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-13', '2556', '416-478', 44);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-13', '8512', '744-469', 45);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-19', '5677', '671-670', 46);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-21', '5342', '571-886', 47);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-19', '3740', '476-435', 48);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-10', '2416', '993-500', 49);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-11', '9238', '172-374', 50);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-21', '3698', '878-211', 51);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-15', '4430', '400-218', 52);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-21', '8344', '619-266', 53);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-20', '3175', '171-926', 54);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-13', '4441', '342-478', 55);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-14', '3676', '299-779', 56);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-15', '8009', '688-441', 57);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-14', '5184', '741-670', 58);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-11', '5760', '781-607', 59);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-21', '2446', '201-594', 60);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-12', '4848', '620-252', 61);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-22', '6525', '578-997', 62);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-15', '8486', '641-961', 63);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-17', '8652', '431-481', 64);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-13', '9455', '866-685', 65);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-11', '2142', '388-347', 66);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-15', '2383', '291-599', 67);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-22', '3211', '448-890', 68);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-19', '4839', '753-447', 69);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-18', '6132', '255-511', 70);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-20', '9485', '858-167', 71);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-22', '8272', '971-932', 72);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-11', '2789', '474-928', 73);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-13', '7662', '344-272', 74);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-13', '6673', '617-225', 75);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-15', '6870', '804-473', 76);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-20', '7263', '832-839', 77);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-18', '7471', '889-658', 78);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-18', '7885', '982-668', 79);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-16', '8496', '158-215', 80);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-21', '3757', '201-380', 81);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-12', '9633', '584-940', 82);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-22', '7909', '829-194', 83);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-16', '8498', '461-756', 84);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-10', '4997', '681-780', 85);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-21', '2008', '820-401', 86);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-16', '9988', '542-932', 87);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-19', '5569', '746-952', 88);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-15', '6196', '878-600', 89);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-17', '3607', '258-849', 90);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-17', '7853', '791-216', 91);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-17', '6405', '791-915', 92);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-12', '8621', '582-950', 93);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-13', '2997', '726-558', 94);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-16', '5285', '556-621', 95);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-10', '7795', '907-469', 96);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-10', '6028', '794-425', 97);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-19', '9753', '766-262', 98);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-16', '2763', '912-823', 99);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-19', '4698', '134-690', 100);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-20', '5254', '911-181', 101);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '9468', '355-724', 102);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-17', '2689', '431-122', 103);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '4138', '427-171', 104);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-21', '3352', '459-907', 105);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-10', '4344', '957-793', 106);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-13', '4268', '608-825', 107);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-17', '4100', '305-401', 108);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-13', '6094', '407-333', 109);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-10', '9584', '157-321', 110);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-12', '5945', '427-460', 111);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-12', '5588', '857-304', 112);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-17', '3327', '850-386', 113);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-15', '2011', '214-219', 114);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-12', '8987', '504-544', 115);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-16', '7355', '817-631', 116);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-12', '7758', '276-548', 117);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-18', '3613', '481-819', 118);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-14', '9668', '704-601', 119);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-19', '9839', '596-963', 120);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-22', '4090', '656-366', 121);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-15', '2427', '494-398', 122);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-13', '9914', '145-764', 123);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-15', '8852', '680-138', 124);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-15', '3437', '414-594', 125);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-22', '3715', '193-520', 126);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-14', '6979', '506-171', 127);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-22', '5535', '368-997', 128);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-13', '7943', '152-791', 129);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-14', '5935', '298-134', 130);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-18', '6110', '264-400', 131);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-21', '6730', '624-278', 132);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-14', '6257', '184-247', 133);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-14', '4159', '235-198', 134);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-17', '7144', '747-503', 135);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-15', '2661', '339-610', 136);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '8085', '922-704', 137);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-10', '9877', '190-127', 138);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-11', '5968', '492-161', 139);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-19', '7918', '129-902', 140);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-18', '5692', '508-829', 141);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-12', '4613', '992-440', 142);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-17', '9279', '489-258', 143);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-10', '9706', '958-355', 144);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-11', '9789', '987-699', 145);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-14', '5502', '708-824', 146);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-22', '9811', '609-599', 147);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-22', '7786', '189-352', 148);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-18', '5411', '943-434', 149);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-11', '3308', '602-427', 150);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-11', '4622', '461-705', 151);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-15', '6163', '972-423', 152);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-11', '5893', '806-291', 153);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-18', '6947', '172-936', 154);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-20', '2710', '432-872', 155);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-18', '8746', '978-175', 156);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-16', '3220', '346-772', 157);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-16', '3307', '856-194', 158);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-17', '6177', '397-693', 159);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-17', '7955', '628-595', 160);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-12', '9464', '202-688', 161);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-16', '4241', '744-674', 162);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-15', '8552', '358-955', 163);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-19', '9935', '479-433', 164);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-14', '8858', '749-476', 165);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-22', '3128', '857-760', 166);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-18', '9658', '213-676', 167);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-13', '6050', '782-510', 168);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-14', '8929', '736-769', 169);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-17', '4440', '758-416', 170);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-18', '8415', '714-224', 171);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-12', '9276', '276-752', 172);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-21', '7627', '402-900', 173);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-10', '7173', '229-388', 174);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-21', '5075', '259-855', 175);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-15', '8853', '486-857', 176);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '8948', '939-308', 177);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-15', '2944', '800-324', 178);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-12', '2619', '467-377', 179);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-16', '9100', '138-712', 180);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-12', '2573', '230-787', 181);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-11', '9936', '457-506', 182);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-10', '7187', '756-639', 183);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-18', '2948', '156-899', 184);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-19', '4111', '880-464', 185);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-19', '8302', '568-245', 186);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-21', '8912', '725-296', 187);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-15', '5972', '566-660', 188);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('20-21', '2873', '547-894', 189);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-14', '3184', '734-190', 190);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-10', '5944', '294-543', 191);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-13', '7411', '379-928', 192);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-21', '6369', '803-587', 193);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-12', '9431', '968-155', 194);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-13', '3545', '756-834', 195);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-22', '5205', '846-737', 196);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-15', '5038', '863-370', 197);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-22', '6700', '712-866', 198);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-10', '7501', '412-928', 199);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-20', '7480', '315-850', 200);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-22', '5085', '680-123', 201);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-11', '4574', '708-718', 202);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-14', '7588', '239-594', 203);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('15-13', '9266', '440-667', 204);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-21', '7707', '820-141', 205);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-13', '4314', '676-771', 206);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-20', '6947', '854-557', 207);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-21', '2547', '278-369', 208);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-12', '4709', '464-293', 209);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-12', '6283', '450-700', 210);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-12', '6564', '917-940', 211);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-19', '2273', '808-976', 212);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-14', '8239', '195-269', 213);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('22-19', '5992', '407-641', 214);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('10-10', '2980', '363-789', 215);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-21', '5650', '991-864', 216);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-19', '8088', '393-313', 217);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-18', '3385', '156-617', 218);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-16', '7968', '825-658', 219);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('21-13', '7144', '391-629', 220);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-12', '7920', '185-657', 221);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('12-18', '8778', '497-673', 222);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('11-10', '7833', '368-752', 223);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('14-12', '8621', '140-836', 224);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-18', '2390', '256-894', 225);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-15', '6057', '903-386', 226);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-13', '2587', '220-359', 227);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-14', '8759', '204-204', 228);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-20', '9299', '499-846', 229);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-11', '2453', '686-755', 230);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('19-14', '3336', '545-644', 231);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('13-18', '6086', '667-516', 232);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('17-20', '7428', '266-682', 233);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('18-22', '6151', '808-315', 234);
-INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-16', '8804', '288-738', 235);
+INSERT INTO libraryShema.pasport_details OVERRIDING SYSTEM VALUE VALUES 
+((floor(random()*(25-11+1))+11 ||'-'|| floor(random()*(25-11+1))+11),
+cast(floor(random()*(9999-1000+1))+1000 as varchar(10)),
+(floor(random()*(999-111+1))+111 ||'-'|| floor(random()*(999-111+1))+111),
+generate_series(1,235,1)) ;
 
 
 --
@@ -570,50 +305,80 @@ INSERT INTO public.pasport_details OVERRIDING SYSTEM VALUE VALUES ('16-16', '880
 -- Data for Name: person
 -- 24
 
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (1, 'Волкова', 'Екатерина', 1, '1988-08-08');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (2, 'Кондратьева', 'Анна', 2, '1974-03-12');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (3, 'Антонова', 'Любовь', 3, '1971-04-15');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (4, 'Дроздова', 'Мария', 4, '1984-03-03');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (5, 'Николаева', 'Екатерина', 5, '1975-12-12');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (6, 'Киселева', 'Агата', 6, '1983-06-24');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (7, 'Тихонова', 'Ольга', 7, '1989-03-20');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (8, 'Ларионов', 'Богдан', 8, '1998-04-10');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (9, 'Грачевская', 'Теона', 9, '2007-03-02');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (10, 'Орлов', 'Андрей', 10, '2007-01-15');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (11, 'Жданов', 'Артём', 11, '2013-11-07');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (12, 'Климов', 'Тимофей', 12, '2005-02-09');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (13, 'Зимов', 'Максим', 13, '2012-05-10');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (14, 'Жарова', 'Алиса', 14, '2011-01-19');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (15, 'Русакова', 'Маргарита', 15, '2009-01-25');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (16, 'Медведева', 'Лидия', 16, '2009-08-20');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (17, 'Чижова', 'Виктор', 17, '2015-12-24');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (18, 'Богушевский', 'Роман', 18, '2003-01-07');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (19, 'Козлова', 'Мария', 19, '2006-01-08');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (20, 'Романова', 'Кира', 20, '2002-01-07');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (21, 'Крючкова', 'Милана', 21, '2016-03-03');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (22, 'Новикова', 'Ксения', 22, '2004-05-27');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (23, 'Зайцева', 'Ника', 23, '2003-05-23');
-INSERT INTO public.person OVERRIDING SYSTEM VALUE VALUES (24, 'Волкова', 'Светлана', 24, '2010-09-09');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (1, 'Волкова', 'Екатерина', 1, '1988-08-08');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (2, 'Кондратьева', 'Анна', 2, '1974-03-12');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (3, 'Антонова', 'Любовь', 3, '1971-04-15');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (4, 'Дроздова', 'Мария', 4, '1984-03-03');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (5, 'Николаева', 'Екатерина', 5, '1975-12-12');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (6, 'Киселева', 'Агата', 6, '1983-06-24');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (7, 'Тихонова', 'Ольга', 7, '1989-03-20');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (8, 'Ларионов', 'Богдан', 8, '1998-04-10');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (9, 'Грачевская', 'Теона', 9, '2007-03-02');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (10, 'Орлов', 'Андрей', 10, '2007-01-15');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (11, 'Жданов', 'Артём', 11, '2013-11-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (12, 'Климов', 'Тимофей', 12, '2005-02-09');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (13, 'Зимов', 'Максим', 13, '2012-05-10');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (14, 'Жарова', 'Алиса', 14, '2011-01-19');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (15, 'Русакова', 'Маргарита', 15, '2009-01-25');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (16, 'Медведева', 'Лидия', 16, '2009-08-20');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (17, 'Чижова', 'Виктор', 17, '2015-12-24');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (18, 'Богушевский', 'Роман', 18, '2003-01-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (19, 'Козлова', 'Мария', 19, '2006-01-08');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (20, 'Романова', 'Кира', 20, '2002-01-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (21, 'Крючкова', 'Милана', 21, '2016-03-03');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (22, 'Новикова', 'Ксения', 22, '2004-05-27');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (23, 'Зайцева', 'Ника', 23, '2003-05-23');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (24, 'Волкова', 'Светлана', 24, '2010-09-09');
 
 
 --
 -- VISITOR
 -- 16
 
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('larionov-bogdan@mail.ru', 89355315881, 8);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('grachevskaya-teona@mail.ru', 89886769158, 9);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('orlov-andrej@mail.ru', 89800596295, 10);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('zhdanov-artyom@mail.ru', 89708528608, 11);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('klimov-timofej@mail.ru', 89019473975, 12);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('zimov-maksim@mail.ru', 89708741589, 13);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('zharova-alisa@mail.ru', 89178289501, 14);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('rusakova-margarita@mail.ru', 89241379795, 15);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('medvedeva-lidiya@mail.ru', 89960677768, 16);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('chizhova-viktor@mail.ru', 89951445315, 17);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('bogushevskij-roman@mail.ru', 89925415922, 18);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('kozlova-mariya@mail.ru', 89992567433, 19);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('romanova-kira@mail.ru', 89537559797, 20);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('kryuchkova-milana@mail.ru', 89392533500, 21);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('novikova-kseniya@mail.ru', 89828954290, 22);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('zajceva-nika@mail.ru', 89046543786, 23);
-INSERT INTO public.visitor OVERRIDING SYSTEM VALUE VALUES ('volkova-svetlana@mail.ru', 89049543286, 24);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('larionov-bogdan@mail.ru', 89355315881, 8);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('grachevskaya-teona@mail.ru', 89886769158, 9);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('orlov-andrej@mail.ru', 89800596295, 10);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zhdanov-artyom@mail.ru', 89708528608, 11);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('klimov-timofej@mail.ru', 89019473975, 12);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zimov-maksim@mail.ru', 89708741589, 13);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zharova-alisa@mail.ru', 89178289501, 14);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('rusakova-margarita@mail.ru', 89241379795, 15);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('medvedeva-lidiya@mail.ru', 89960677768, 16);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('chizhova-viktor@mail.ru', 89951445315, 17);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('bogushevskij-roman@mail.ru', 89925415922, 18);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kozlova-mariya@mail.ru', 89992567433, 19);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('romanova-kira@mail.ru', 89537559797, 20);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kryuchkova-milana@mail.ru', 89392533500, 21);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('novikova-kseniya@mail.ru', 89828954290, 22);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zajceva-nika@mail.ru', 89046543786, 23);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('volkova-svetlana@mail.ru', 89049543286, 24);
+
+
+
+
+
+
+--
+-- генерация записей для каждого посетителя со случайным сотрудником
+-- 17
+
+insert into record ("data" ,id_visitor, id_employee) values (
+to_timestamp(1388534400+random()*243071999),
+generate_series(8,24,1),
+floor(random()*(7-1+1)+1)
+);
+
+--
+--генерация списка книг по записям
+--16
+
+insert into book_list (id_entry,id_book) values (
+generate_series(1,17,1),
+floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3))
+)
+
+--
+--генерация даты возврата, берется дата взятия книги, убирается время и прибавляется интервал в 1 месяц
+--
+update book_list
+set return_data  = (select ("data" + interval '1 month')::date  from record where record.id_record = book_list.id_entry);
