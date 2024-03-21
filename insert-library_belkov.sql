@@ -369,7 +369,7 @@ floor(random()*(7-1+1)+1)
 insert into book_list (id_entry,id_book) values (
 generate_series(1,17,1),
 floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3))
-)
+);
 
 --
 --генерация даты возврата, берется дата взятия книги, убирается время и прибавляется интервал в 1 месяц
