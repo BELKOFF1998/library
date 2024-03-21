@@ -116,6 +116,67 @@ INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1928, 'Айтм�
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1888, 'Макаренко', 'Антон', 'Украина', 104);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1828, 'Верн', 'Жюль', 'Франция', 14);
 
+--
+-- TOC entry 4861 (class 0 OID 16418)
+-- Dependencies: 216
+-- Data for Name: book; Type: TABLE DATA; Schema: libraryShema; Owner: postgres
+--
+
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Преступление и наказание', 'Философия', 234, 'Русский', 1866, NULL , 1);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Село Степанчиково и его обитатели', 'Сатира', 100, 'Русский', 1859, NULL, 2);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Братья Карамазовы', 'Драма', 255, 'Русский', 1879, NULL, 3);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Идиот', 'Философия', 295, 'Русский', 1869, NULL, 4);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Униженные и оскорблённые', 'Психология', 195, 'Русский', 1861, NULL, 5);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Подросток', 'Психология', 124, 'Русский', 1875, NULL, 6);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бесы', 'Психология', 324, 'Русский', 1872, NULL, 7);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Игрок', 'Классика', 354, 'Русский', 1866, NULL, 8);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бедные люди', 'Классика', 112, 'Русский', 1845, NULL, 9);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мастер и Маргарита', 'Сатира', 402, 'Русский', 1940, NULL, 10);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Собачье сердце', 'Сатира', 366, 'Русский', 1925, NULL, 11);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Белая гвардия', 'История', 322, 'Русский', 1924, NULL, 12);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Записки юного врача', 'Сборник', 312, 'Русский', 1926, NULL, 13);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Морфий', 'Повесть', 222, 'Русский', 1926, NULL, 14);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Евгений Онегин', 'Поэма', 240, 'Русский', 1837, NULL, 15);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Повести Белкина', 'Повесть', 222, 'Русский', 1831, NULL, 16);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дубровский', 'Драма', 252, 'Русский', 1842, NULL, 17);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Капитанская дочка', 'Драма', 333, 'Русский', 1836, NULL, 18);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мёртвые души', 'Поэма', 240, 'Русский', 1842, NULL, 19);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Ревизор', 'Комедия', 290, 'Русский', 1836, NULL, 20);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вечера на хуторе близ Диканьки', 'Повесть', 250, 'Русский', 1832, NULL, 21);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Тарас Бульба', 'Повесть', 340, 'Русский', 1835, NULL, 22);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Шинель', 'Повесть', 270, 'Русский', 1842, NULL, 23);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вий', 'Сказка', 292, 'Русский', 1835, NULL, 24);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Петербургские повести', 'Повесть', 370, 'Русский', 1842, NULL, 25);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Граф Монте-Кристо', 'Приключение', 331, 'Французкий', 1845, NULL, 26);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три мушкетера', 'Приключение', 322, 'Французкий', 1844, NULL, 27);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Виконт де Бражелон, или Десять лет спустя', 'Приключение', 366, 'Французкий', 1850, NULL, 28);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Двадцать лет спустя', 'Приключение', 270, 'Французкий', 1845, NULL, 29);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Графиня де Монсоро', 'Приключение', 250, 'Французкий', 1846, NULL, 30);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Сорок пять', 'Приключение', 390, 'Французкий', 1848, NULL, 31);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Королева Марго', 'Приключение', 270, 'Французкий', 1845, NULL, 32);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Черный тюльпан', 'Роман', 254, 'Французкий', 1850, NULL, 33);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Две Дианы', 'Драма', 322, 'Французкий', 1847, NULL, 34);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Асканио', 'Приключение', 354, 'Французкий', 1843, NULL, 35);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Война и мир', 'Классика', 454, 'Русский', 1868, NULL, 36);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Воскресение', 'Роман', 324, 'Русский', 1899, NULL, 37);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Анна Каренина', 'Классика', 254, 'Русский', 1877, NULL, 38);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Детство. Отрочество. Юность', 'Автобиография', 314, 'Русский', 1857, NULL, 39);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Хаджи-Мурат', 'Повесть', 274, 'Русский', 1904, NULL, 40);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Кавказский пленник', 'Детская литература', 165, 'Русский', 1872, NULL, 41);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Севастопольские рассказы', 'Драма', 354, 'Русский', 1855, NULL, 42);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Крейцерова соната', 'Драма', 254, 'Русский', 1889, NULL, 43);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Казаки', 'Повесть', 341, 'Русский', 1863, NULL, 44);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Отец Сергий', 'Повесть', 312, 'Русский', 1911, NULL, 45);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Палата № 6', 'Повесть', 344, 'Русский', 1892, NULL, 46);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Драма на охоте', 'Повесть', 341, 'Русский', 1885, NULL, 47);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Рассказы', 'Сборник', 295, 'Русский', 1885, NULL, 48);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вишневый сад', 'Комедия', 312, 'Русский', 1903, NULL, 49);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дядя Ваня', 'Драма', 352, 'Русский', 1896, NULL, 50);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Чайка', 'Комедия', 254, 'Русский', 1896, NULL, 51);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три сестры', 'Драма', 242, 'Русский', 1900, NULL, 52);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дама с собачкой', 'Рассказ', 212, 'Русский', 1899, NULL, 53);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Архиерей', 'Рассказ', 212, 'Русский', 1902, NULL, 54);
+INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Каштанка', 'Детская литература', 292, 'Русский', 1887, NULL, 55);
 
 --
 --
@@ -179,68 +240,46 @@ INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 54);
 INSERT INTO libraryShema.author_book OVERRIDING SYSTEM VALUE VALUES (7, 55);
 
 
---
--- TOC entry 4861 (class 0 OID 16418)
--- Dependencies: 216
--- Data for Name: book; Type: TABLE DATA; Schema: libraryShema; Owner: postgres
---
 
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Преступление и наказание', 'Философия', 234, 'Русский', 1866, NULL , 1);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Село Степанчиково и его обитатели', 'Сатира', 100, 'Русский', 1859, NULL, 2);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Братья Карамазовы', 'Драма', 255, 'Русский', 1879, NULL, 3);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Идиот', 'Философия', 295, 'Русский', 1869, NULL, 4);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Униженные и оскорблённые', 'Психология', 195, 'Русский', 1861, NULL, 5);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Подросток', 'Психология', 124, 'Русский', 1875, NULL, 6);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бесы', 'Психология', 324, 'Русский', 1872, NULL, 7);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Игрок', 'Классика', 354, 'Русский', 1866, NULL, 8);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Бедные люди', 'Классика', 112, 'Русский', 1845, NULL, 9);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мастер и Маргарита', 'Сатира', 402, 'Русский', 1940, NULL, 10);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Собачье сердце', 'Сатира', 366, 'Русский', 1925, NULL, 11);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Белая гвардия', 'История', 322, 'Русский', 1924, NULL, 12);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Записки юного врача', 'Сборник', 312, 'Русский', 1926, NULL, 13);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Морфий', 'Повесть', 222, 'Русский', 1926, NULL, 14);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Евгений Онегин', 'Поэма', 240, 'Русский', 1837, NULL, 15);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Повести Белкина', 'Повесть', 222, 'Русский', 1831, NULL, 16);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дубровский', 'Драма', 252, 'Русский', 1842, NULL, 17);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Капитанская дочка', 'Драма', 333, 'Русский', 1836, NULL, 18);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Мёртвые души', 'Поэма', 240, 'Русский', 1842, NULL, 19);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Ревизор', 'Комедия', 290, 'Русский', 1836, NULL, 20);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вечера на хуторе близ Диканьки', 'Повесть', 250, 'Русский', 1832, NULL, 21);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Тарас Бульба', 'Повесть', 340, 'Русский', 1835, NULL, 22);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Шинель', 'Повесть', 270, 'Русский', 1842, NULL, 23);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вий', 'Сказка', 292, 'Русский', 1835, NULL, 24);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Петербургские повести', 'Повесть', 370, 'Русский', 1842, NULL, 25);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Граф Монте-Кристо', 'Приключение', 331, 'Французкий', 1845, NULL, 26);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три мушкетера', 'Приключение', 322, 'Французкий', 1844, NULL, 27);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Виконт де Бражелон, или Десять лет спустя', 'Приключение', 366, 'Французкий', 1850, NULL, 28);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Двадцать лет спустя', 'Приключение', 270, 'Французкий', 1845, NULL, 29);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Графиня де Монсоро', 'Приключение', 250, 'Французкий', 1846, NULL, 30);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Сорок пять', 'Приключение', 390, 'Французкий', 1848, NULL, 31);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Королева Марго', 'Приключение', 270, 'Французкий', 1845, NULL, 32);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Черный тюльпан', 'Роман', 254, 'Французкий', 1850, NULL, 33);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Две Дианы', 'Драма', 322, 'Французкий', 1847, NULL, 34);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Асканио', 'Приключение', 354, 'Французкий', 1843, NULL, 35);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Война и мир', 'Классика', 454, 'Русский', 1868, NULL, 36);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Воскресение', 'Роман', 324, 'Русский', 1899, NULL, 37);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Анна Каренина', 'Классика', 254, 'Русский', 1877, NULL, 38);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Детство. Отрочество. Юность', 'Автобиография', 314, 'Русский', 1857, NULL, 39);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Хаджи-Мурат', 'Повесть', 274, 'Русский', 1904, NULL, 40);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Кавказский пленник', 'Детская литература', 165, 'Русский', 1872, NULL, 41);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Севастопольские рассказы', 'Драма', 354, 'Русский', 1855, NULL, 42);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Крейцерова соната', 'Драма', 254, 'Русский', 1889, NULL, 43);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Казаки', 'Повесть', 341, 'Русский', 1863, NULL, 44);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Отец Сергий', 'Повесть', 312, 'Русский', 1911, NULL, 45);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Палата № 6', 'Повесть', 344, 'Русский', 1892, NULL, 46);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Драма на охоте', 'Повесть', 341, 'Русский', 1885, NULL, 47);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Рассказы', 'Сборник', 295, 'Русский', 1885, NULL, 48);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Вишневый сад', 'Комедия', 312, 'Русский', 1903, NULL, 49);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дядя Ваня', 'Драма', 352, 'Русский', 1896, NULL, 50);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Чайка', 'Комедия', 254, 'Русский', 1896, NULL, 51);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Три сестры', 'Драма', 242, 'Русский', 1900, NULL, 52);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Дама с собачкой', 'Рассказ', 212, 'Русский', 1899, NULL, 53);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Архиерей', 'Рассказ', 212, 'Русский', 1902, NULL, 54);
-INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Каштанка', 'Детская литература', 292, 'Русский', 1887, NULL, 55);
+--
+-- Data for Name: pasport_details;
+--235
 
+INSERT INTO libraryShema.pasport_details OVERRIDING SYSTEM VALUE VALUES 
+((floor(random()*(25-11+1))+11 ||'-'|| floor(random()*(25-11+1))+11),
+cast(floor(random()*(9999-1000+1))+1000 as varchar(10)),
+(floor(random()*(999-111+1))+111 ||'-'|| floor(random()*(999-111+1))+111),
+generate_series(1,235,1)) ;
+
+--
+-- 
+-- Data for Name: person
+-- 24
+
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (1, 'Волкова', 'Екатерина', 1, '1988-08-08');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (2, 'Кондратьева', 'Анна', 2, '1974-03-12');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (3, 'Антонова', 'Любовь', 3, '1971-04-15');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (4, 'Дроздова', 'Мария', 4, '1984-03-03');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (5, 'Николаева', 'Екатерина', 5, '1975-12-12');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (6, 'Киселева', 'Агата', 6, '1983-06-24');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (7, 'Тихонова', 'Ольга', 7, '1989-03-20');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (8, 'Ларионов', 'Богдан', 8, '1998-04-10');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (9, 'Грачевская', 'Теона', 9, '2007-03-02');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (10, 'Орлов', 'Андрей', 10, '2007-01-15');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (11, 'Жданов', 'Артём', 11, '2013-11-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (12, 'Климов', 'Тимофей', 12, '2005-02-09');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (13, 'Зимов', 'Максим', 13, '2012-05-10');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (14, 'Жарова', 'Алиса', 14, '2011-01-19');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (15, 'Русакова', 'Маргарита', 15, '2009-01-25');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (16, 'Медведева', 'Лидия', 16, '2009-08-20');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (17, 'Чижова', 'Виктор', 17, '2015-12-24');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (18, 'Богушевский', 'Роман', 18, '2003-01-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (19, 'Козлова', 'Мария', 19, '2006-01-08');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (20, 'Романова', 'Кира', 20, '2002-01-07');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (21, 'Крючкова', 'Милана', 21, '2016-03-03');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (22, 'Новикова', 'Ксения', 22, '2004-05-27');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (23, 'Зайцева', 'Ника', 23, '2003-05-23');
+INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (24, 'Волкова', 'Светлана', 24, '2010-09-09');
 
 
 
@@ -249,6 +288,29 @@ INSERT INTO libraryShema.book OVERRIDING SYSTEM VALUE VALUES ('Каштанка'
 -- 7
 
 INSERT INTO libraryShema.employee OVERRIDING SYSTEM VALUE VALUES (floor(random()*(3-1+1))+1, generate_series(1,7,1));
+
+
+--
+-- VISITOR
+-- 16
+
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('larionov-bogdan@mail.ru', 89355315881, 8);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('grachevskaya-teona@mail.ru', 89886769158, 9);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('orlov-andrej@mail.ru', 89800596295, 10);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zhdanov-artyom@mail.ru', 89708528608, 11);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('klimov-timofej@mail.ru', 89019473975, 12);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zimov-maksim@mail.ru', 89708741589, 13);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zharova-alisa@mail.ru', 89178289501, 14);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('rusakova-margarita@mail.ru', 89241379795, 15);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('medvedeva-lidiya@mail.ru', 89960677768, 16);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('chizhova-viktor@mail.ru', 89951445315, 17);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('bogushevskij-roman@mail.ru', 89925415922, 18);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kozlova-mariya@mail.ru', 89992567433, 19);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('romanova-kira@mail.ru', 89537559797, 20);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kryuchkova-milana@mail.ru', 89392533500, 21);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('novikova-kseniya@mail.ru', 89828954290, 22);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zajceva-nika@mail.ru', 89046543786, 23);
+INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('volkova-svetlana@mail.ru', 89049543286, 24);
 
 
 -- ГЕНЕРАЦИЯ ISBN 
@@ -288,74 +350,6 @@ WHERE publisher = '4';
 
 update book
 set id_isbn = (select isbn.id_isbn from isbn where isbn.num = book.id_book);
-
---
--- Data for Name: pasport_details;
---235
-
-INSERT INTO libraryShema.pasport_details OVERRIDING SYSTEM VALUE VALUES 
-((floor(random()*(25-11+1))+11 ||'-'|| floor(random()*(25-11+1))+11),
-cast(floor(random()*(9999-1000+1))+1000 as varchar(10)),
-(floor(random()*(999-111+1))+111 ||'-'|| floor(random()*(999-111+1))+111),
-generate_series(1,235,1)) ;
-
-
---
--- 
--- Data for Name: person
--- 24
-
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (1, 'Волкова', 'Екатерина', 1, '1988-08-08');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (2, 'Кондратьева', 'Анна', 2, '1974-03-12');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (3, 'Антонова', 'Любовь', 3, '1971-04-15');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (4, 'Дроздова', 'Мария', 4, '1984-03-03');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (5, 'Николаева', 'Екатерина', 5, '1975-12-12');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (6, 'Киселева', 'Агата', 6, '1983-06-24');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (7, 'Тихонова', 'Ольга', 7, '1989-03-20');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (8, 'Ларионов', 'Богдан', 8, '1998-04-10');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (9, 'Грачевская', 'Теона', 9, '2007-03-02');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (10, 'Орлов', 'Андрей', 10, '2007-01-15');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (11, 'Жданов', 'Артём', 11, '2013-11-07');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (12, 'Климов', 'Тимофей', 12, '2005-02-09');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (13, 'Зимов', 'Максим', 13, '2012-05-10');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (14, 'Жарова', 'Алиса', 14, '2011-01-19');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (15, 'Русакова', 'Маргарита', 15, '2009-01-25');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (16, 'Медведева', 'Лидия', 16, '2009-08-20');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (17, 'Чижова', 'Виктор', 17, '2015-12-24');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (18, 'Богушевский', 'Роман', 18, '2003-01-07');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (19, 'Козлова', 'Мария', 19, '2006-01-08');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (20, 'Романова', 'Кира', 20, '2002-01-07');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (21, 'Крючкова', 'Милана', 21, '2016-03-03');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (22, 'Новикова', 'Ксения', 22, '2004-05-27');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (23, 'Зайцева', 'Ника', 23, '2003-05-23');
-INSERT INTO libraryShema.person OVERRIDING SYSTEM VALUE VALUES (24, 'Волкова', 'Светлана', 24, '2010-09-09');
-
-
---
--- VISITOR
--- 16
-
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('larionov-bogdan@mail.ru', 89355315881, 8);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('grachevskaya-teona@mail.ru', 89886769158, 9);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('orlov-andrej@mail.ru', 89800596295, 10);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zhdanov-artyom@mail.ru', 89708528608, 11);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('klimov-timofej@mail.ru', 89019473975, 12);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zimov-maksim@mail.ru', 89708741589, 13);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zharova-alisa@mail.ru', 89178289501, 14);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('rusakova-margarita@mail.ru', 89241379795, 15);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('medvedeva-lidiya@mail.ru', 89960677768, 16);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('chizhova-viktor@mail.ru', 89951445315, 17);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('bogushevskij-roman@mail.ru', 89925415922, 18);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kozlova-mariya@mail.ru', 89992567433, 19);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('romanova-kira@mail.ru', 89537559797, 20);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('kryuchkova-milana@mail.ru', 89392533500, 21);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('novikova-kseniya@mail.ru', 89828954290, 22);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('zajceva-nika@mail.ru', 89046543786, 23);
-INSERT INTO libraryShema.visitor OVERRIDING SYSTEM VALUE VALUES ('volkova-svetlana@mail.ru', 89049543286, 24);
-
-
-
-
 
 
 --
