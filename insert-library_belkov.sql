@@ -382,3 +382,20 @@ floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(ge
 --
 update book_list
 set return_data  = (select ("data" + interval '1 month')::date  from record where record.id_record = book_list.id_entry);
+
+
+
+
+--СОЗДАНИЕ ПРЕДСТАВЛЕНИЙ
+
+--представление хранящее iD всех книг которые можно взять
+create view free_book_id as
+select id_book  from book
+except 
+select id_book from book_list where returned = false;
+
+
+--представление хранящее всю информацию о всех книгах которые можно взять
+create view free_book as
+select book.* from book
+right join free_book_id on book.id_book = free_book_id.id_book;
