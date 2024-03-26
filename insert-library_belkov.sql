@@ -82,7 +82,7 @@ INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1911, 'Рыба�
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1931, 'Вайнер', 'Аркадий', 'Россия', 70);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1938, 'Вайнер', 'Георгий', 'Россия', 71);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1952, 'Алексеев', 'Сергей', 'Россия', 72);
-INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1883, 'Кафка', 'Франц', 'Чехия', 73);
+INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1884, 'Кафка', 'Франц', 'Чехия', 73);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1924, 'Богомолов', 'Владимир', 'Россия', 74);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1850, 'Льюис Стивенсон', 'Роберт', 'Великобритания', 75);
 INSERT INTO libraryShema.author OVERRIDING SYSTEM VALUE VALUES (1854, 'Уайльд', 'Оскар', 'Ирландия', 76);
@@ -357,7 +357,15 @@ set id_isbn = (select isbn.id_isbn from isbn where isbn.num = book.id_book);
 -- 17
 
 insert into record ("data" ,id_visitor, id_employee) values (
-to_timestamp(1388534400+random()*243071999),
+to_timestamp(1245462401+random()*143071999),
+generate_series(8,24,1),
+floor(random()*(7-1+1)+1)
+);
+
+SELECT pg_catalog.setval('libraryShema.entry_id_entry_seq', 18, false);
+
+insert into record ("data" ,id_visitor, id_employee) values (
+to_timestamp(1388534400+random()*143071999),
 generate_series(8,24,1),
 floor(random()*(7-1+1)+1)
 );
@@ -366,8 +374,14 @@ floor(random()*(7-1+1)+1)
 --генерация списка книг по записям
 --16
 
-insert into book_list (id_entry,id_book) values (
+insert into book_list (id_entry,id_book, returned) values (
 generate_series(1,17,1),
+floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3)),
+TRUE;
+);
+
+insert into book_list (id_entry,id_book) values (
+generate_series(18,34,1),
 floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3))
 );
 
