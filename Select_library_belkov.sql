@@ -65,3 +65,10 @@ select distinct
     from author;
 
 
+--5) вывести все книги из Book, для которых не существует записей в таблице Book_list. (exists, not exists, in, not in, count - нельзя использовать)
+ 
+  
+SELECT book.book_name from book
+left join book_list
+on book.id_book = book_list.id_book 
+where book_list.id_book is null;
