@@ -370,30 +370,6 @@ generate_series(8,24,1),
 floor(random()*(7-1+1)+1)
 );
 
---
---генерация списка книг по записям
---16
-
-insert into book_list (id_entry,id_book, returned) values (
-generate_series(1,17,1),
-floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3)),
-TRUE;
-);
-
-insert into book_list (id_entry,id_book) values (
-generate_series(18,34,1),
-floor(random()*((generate_series(1,17,1)*3-1)-(generate_series(1,17,1)*3+1))+(generate_series(1,17,1)*3))
-);
-
---
---генерация даты возврата, берется дата взятия книги, убирается время и прибавляется интервал в 1 месяц
---
-update book_list
-set return_data  = (select ("data" + interval '1 month')::date  from record where record.id_record = book_list.id_entry);
-
-
-
-
 --СОЗДАНИЕ ПРЕДСТАВЛЕНИЙ
 
 --представление хранящее iD всех книг которые можно взять
@@ -407,3 +383,50 @@ select id_book from book_list where returned = false;
 create view free_book as
 select book.* from book
 right join free_book_id on book.id_book = free_book_id.id_book;
+
+--
+--генерация списка книг по записям
+-- в первые 17 записей по 3 случайные книги, 
+
+do $$
+declare
+r integer;
+i integer;
+begin
+	 for i in 1..3
+	 loop
+      FOR r in 1..17               
+    	LOOP
+     	insert into book_list values(r,
+     	(select id_book from free_book_id limit 1),
+    	 False,
+     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));            
+    	END LOOP;
+    end loop;
+   update book_list set returned = true where id_book < 38;
+ end $$;
+ 
+ --в последние 17 записей по 2 книги
+ 
+ do $$
+declare
+r integer;
+i integer;
+begin
+	 for i in 1..2
+	 loop
+      FOR r in 18..34             
+    	LOOP
+     	insert into book_list values(r,
+     	(select id_book from free_book_id limit 1),
+    	 False,
+     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));            
+    	END LOOP;
+    end loop;
+   update book_list set returned = true where id_book < 20;
+ end $$;
+
+
+
+
+
