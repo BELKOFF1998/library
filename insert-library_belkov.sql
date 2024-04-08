@@ -392,38 +392,48 @@ do $$
 declare
 r integer;
 i integer;
+rec record;
+crs_all_addr CURSOR FOR SELECT id_book FROM free_book;
 begin
+	open crs_all_addr;
 	 for i in 1..3
 	 loop
       FOR r in 1..17               
-    	LOOP
+    	loop
+	    fetch from crs_all_addr into rec;
      	insert into book_list values(r,
-     	(select id_book from free_book_id limit 1),
+     	rec.id_book,
     	 False,
-     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));            
+     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));      	
     	END LOOP;
     end loop;
    update book_list set returned = true where id_book < 38;
+  close crs_all_addr;
  end $$;
- 
- --в последние 17 записей по 2 книги
- 
- do $$
+
+-- в последние 17 записей по 2 книги
+
+do $$
 declare
 r integer;
 i integer;
+rec record;
+crs_all_addr CURSOR FOR SELECT id_book FROM free_book;
 begin
+	open crs_all_addr;
 	 for i in 1..2
 	 loop
-      FOR r in 18..34             
-    	LOOP
+      FOR r in 1..17               
+    	loop
+	    fetch from crs_all_addr into rec;
      	insert into book_list values(r,
-     	(select id_book from free_book_id limit 1),
+     	rec.id_book,
     	 False,
-     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));            
+     	(select ("data" + interval '1 month')::date  from record where record.id_record = r));      	
     	END LOOP;
     end loop;
    update book_list set returned = true where id_book < 20;
+  close crs_all_addr;
  end $$;
 
 

@@ -20,6 +20,12 @@ CREATE OR REPLACE FUNCTION f_trg_book_list_check_prev() RETURNS trigger
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
   
   
   
