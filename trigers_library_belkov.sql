@@ -23,13 +23,13 @@ CREATE OR REPLACE FUNCTION f_trg_book_list_check_prev() RETURNS trigger
  --фунция возвращающая данные о записях и книгах для одного человека
  -- входные данные - имя и фамилия посетителя через пробел
  
-create or replace function get_book_info(data_name varchar) returns SETOF record
+create or replace function get_book_info(data_name varchar) returns table (Дата_записи date, Дата_возврата date, Возращена bool, Книга varchar)
 as $$
 declare 
 l_name varchar := left(data_name, position(' ' in data_name) - 1);
 l_Sname varchar := right(data_name, -position(' ' in data_name));
 begin
-return query select record."data"::date,book_list.return_data as ВОЗВРАТ, book_list.returned as ВОЗВРАЩЕНА,book.book_name as КНИГА from record
+return query select record."data"::date,book_list.return_data, book_list.returned,book.book_name from record
 				join book_list on book_list.id_entry = record.id_record
 				join book on book.id_book = book_list.id_book
 				join visitor on visitor.id_visitor = record.id_visitor
@@ -38,10 +38,8 @@ return query select record."data"::date,book_list.return_data as ВОЗВРАТ,
 end $$ LANGUAGE plpgsql;
 
 
-select * from get_book_info('Артём Жданов') as (Дата_записи date, Дата_возврата date, Возращена bool, Книга varchar);
+select * from get_book_info('Артём Жданов');
 	
- 
-
  
  
  
