@@ -1,12 +1,21 @@
 --создание временной таблицы для использования в генеративных процедурах
 --таблица хранит название колонки с первичным ключем и его тип данных для каждой таблицы
+-- так же хранит строку с названиями колонок которые будут изменятся значения которых передаются в параметры процедур insert и update
 create temp table temp_primal_keys as
+with t_columns as(
+SELECT table_name,STRING_AGG(column_name,', ')
+ FROM information_schema.columns
+ where is_identity = 'NO'
+ group by  information_schema.columns.table_name
+ )
 SELECT   
-  pg_class.oid::regclass,
+  btrim(pg_class.oid::regclass||'','"') as oid,
   pg_attribute.attname, 
-  format_type(pg_attribute.atttypid, pg_attribute.atttypmod) 
-FROM pg_index, pg_class, pg_attribute, pg_namespace 
-WHERE   
+  format_type(pg_attribute.atttypid, pg_attribute.atttypmod),
+  string_agg
+FROM pg_index, pg_class, pg_attribute, pg_namespace,t_columns 
+where
+  t_columns.table_name::text = btrim(pg_class.oid::regclass||'','"') and
   indrelid = pg_class.oid AND 
   nspname = 'libraryshema' AND 
   pg_class.relnamespace = pg_namespace.oid AND 
@@ -14,8 +23,8 @@ WHERE
   pg_attribute.attnum = any(pg_index.indkey)
  AND indisprimary;
  
---select * from temp_primal_keys;
-
+select * from temp_primal_keys;
+drop table temp_primal_keys;
 
 --создать отдельную схему где будут хранится процедуры
 do $$
@@ -31,16 +40,11 @@ proc_txt text; --текст объявления новой процедуры
 atr_txt text; --список атрибутов для новой процедуры
 where_txt text; -- текст в запросе после WHERE
 begin
-	if((select count(*) from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass)::int = 1) then --если в таблице ключ из 1 значения то
-	atr_txt := 'at1 '||(select "format_type" from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass); -- в процедуре будет один атрибут
-	else 
-	atr_txt := 'at1 integer, at2 integer'; -- иначе будет 2 атрибута (например таблица author_book)	
-	end if;
-	if((select count(*) from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass)::int = 1) then --если в таблице ключ из 1 значения то
-	where_txt := 'libraryshema.'||table_name||'.'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass)||' = ''||at1||'''; -- в процедуре будет одно условие
-	else
-	where_txt := 'libraryshema.'||table_name||'.'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass limit 1)||' = ''||at1||'' AND'||
-			     ' libraryshema.'||table_name||'.'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||table_name||'"')::regclass limit 1 offset 1)||' = ''||at2||'';'; -- иначе будет 2 условия (например таблица author_book)
+	atr_txt := (select string_agg('at_'||attname||' '||format_type,', ') from temp_primal_keys where  temp_primal_keys.oid = table_name); --текст с названиями ключей таблицы для параметров
+	
+	where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = table_name limit 1)||' = ''||$1||'''; --текст проверки ключа после where	
+	if ((select count(*) from temp_primal_keys where temp_primal_keys.oid = table_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
+    where_txt := where_txt||' AND '||(select attname from temp_primal_keys where temp_primal_keys.oid = table_name limit 1 offset 1)||' = ''||$2||'''; --в where добавляется приверка второго ключа
 	end if;
 
 	proc_txt := 'CREATE OR REPLACE PROCEDURE pr_schema.p_'||table_name||'_d('||atr_txt||') AS    
@@ -48,16 +52,13 @@ begin
 					DECLARE
 					query_D text;
                     BEGIN
-					query_D := ''DELETE from libraryshema.'||table_name||' WHERE '||where_txt||''';
+					query_D := ''DELETE from libraryshema."'||table_name||'" WHERE '||where_txt||''';
 					EXECUTE query_D;
 					END
                     $$ LANGUAGE plpgsql;'; --компановка текста запроса
-	EXECUTE proc_txt; -- выполнение запроса                    
+	execute proc_txt; -- выполнение запроса                    
 end 
 $BODY$ LANGUAGE plpgsql;
-
---call pr_schema.p_gen_d('isbn'); --пример вызова процедуры
-
 
 --ПРОЦЕДУРА ГЕНЕРИРУЮЩАЯ ПРОЦЕДУРУ INSERT ДЛЯ ТАБЛИЦЫ
 create or replace procedure pr_schema.p_gen_i(t_name text) AS --входной параметр - название таблицы
@@ -68,15 +69,12 @@ proc_txt text; --текст объявления новой процедуры
 atr_txt text := ''; --список атрибутов для новой процедуры
 ar_columns text[]; --масив хранящий названия колонок таблицы
 l_values text := ''; -- текст в запросе после where
-begin
-	SELECT ARRAY_AGG(column_name) INTO ar_columns FROM information_schema.columns where information_schema.columns.table_name = t_name and is_identity = 'NO';
-		foreach l_column_name in array ar_columns
-		loop
-			atr_txt := (atr_txt||l_column_name||' '||(select data_type  from information_schema.columns where information_schema.columns.table_name = t_name and column_name = l_column_name)||', ');
-			l_values := l_values||' '||l_column_name||',';
-		end loop;		
-		atr_txt := left(atr_txt,-2);
-		l_values := left(l_values,-1);
+begin	
+		atr_txt := (select string_agg(column_name||' '||data_type,', ')  from information_schema.columns --строка с перечислением названия колонки и типа через запятую
+	                where information_schema.columns.table_name = t_name and is_identity = 'NO');
+	               
+		l_values := (select STRING_AGG(column_name,', ') FROM information_schema.columns
+	                where information_schema.columns.table_name = t_name and is_identity = 'NO'); --строка с перечислением названия колонки через запятую
 	
 		proc_txt := 'CREATE OR REPLACE PROCEDURE pr_schema.p_'||t_name||'_i('||atr_txt||') AS    
 					$$ 
@@ -89,44 +87,32 @@ begin
 end 
 $BODY$ LANGUAGE plpgsql;
 
---call pr_schema.p_gen_i('visitor');--пример вызова процедуры
-
 --ПРОЦЕДУРА ГЕНЕРИРУЮЩАЯ ПРОЦЕДУРУ UPDATE ДЛЯ ТАБЛИЦЫ
 create or replace procedure pr_schema.p_gen_u(t_name text)
 as $BODY$
 declare
-l_column_name text; --переменная для цикла хранящая название колонки
 proc_txt text; --текст объявления новой процедуры
 atr_txt text := ''; --список атрибутов для новой процедуры
-ar_columns text[]; --масив хранящий названия колонок таблицы
 l_columns text := ''; -- названия столбцев которые нужно изменить
 where_txt text := ''; -- текст условия после where
 l_values text :=''; -- текст перечисления новых значений
 begin
-	SELECT ARRAY_AGG(column_name) INTO ar_columns FROM information_schema.columns where information_schema.columns.table_name = t_name and is_identity = 'NO';
-		foreach l_column_name in array ar_columns
-		loop
-			atr_txt := (atr_txt||'o_'||l_column_name||' '||(select data_type  from information_schema.columns where information_schema.columns.table_name = t_name and column_name = l_column_name)||', ');
-			l_values := l_values||' o_'||l_column_name||',';
-		    l_columns := l_columns||' '||l_column_name||',';
-		end loop;
-		if((select count(*) from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass)::int = 1) then --если первичный ключ таблицы это одно значение, то к атрибутам добавляется 1 атрибут
-		atr_txt := 'p_'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass)||' '||            --принимающий данные ключа записи которую надо изменить
-					(select format_type from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass)||','||
-					left(atr_txt,-2);
-					where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass)||' = $1';
-					
-		else
-		atr_txt := 'p_'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1)||' '|| --иначе если первичный ключ составной, добавляется 2 параметра в процедуру
-					(select format_type from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1)||','|| --которые принимают значение ключа записи которую надо изменить
-					'p_'||(select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1 offset 1)||' '||
-					(select format_type from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1 offset 1)||','||
-					left(atr_txt,-2);
-					where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1)||' = $1 AND '||
-								 (select attname from temp_primal_keys where temp_primal_keys.oid = ('"'||t_name||'"')::regclass limit 1 offset 1)||' = $2';
-		end if;
-		l_columns := left(l_columns,-1);
-	    l_values := left(l_values,-1);
+	atr_txt := (select string_agg('o_'||column_name||' '||data_type,', ')  from information_schema.columns --строка с перечислением названия колонки и типа через запятую
+	                where information_schema.columns.table_name = t_name and is_identity = 'NO');          --перед названиями колонок которые надо менять будет приписка "о_"
+	                
+	l_values := (select STRING_AGG('o_'||column_name,', ') FROM information_schema.columns --строка с перечислением только названия колонки через запятую
+	                where information_schema.columns.table_name = t_name and is_identity = 'NO'); --перед названиями колонок которые надо менять будет приписка "о_"
+	                
+	l_columns :=  (select STRING_AGG(column_name,', ') FROM information_schema.columns
+	                where information_schema.columns.table_name = t_name and is_identity = 'NO'); --строка с перечислением названия колонки через запятую      
+	         
+	atr_txt := (select string_AGG('p_'||attname||' '||format_type||', ','') from temp_primal_keys where temp_primal_keys.oid = t_name)||atr_txt; --добавляет к списку аргументов названия первичных ключей
+
+	where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = t_name limit 1)||' = $1'; --текст проверки ключа после where
+
+	if ((select count(*) from temp_primal_keys where temp_primal_keys.oid = t_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
+    where_txt := where_txt||' AND '||(select attname from temp_primal_keys where temp_primal_keys.oid = t_name limit 1 offset 1)||' = $2'; --в where добавляется приверка второго ключа
+	end if;
 	
 		proc_txt := 'CREATE OR REPLACE PROCEDURE pr_schema.p_'||t_name||'_u('||atr_txt||') AS    
 					$b$
@@ -137,10 +123,9 @@ begin
 					END
                     $b$ LANGUAGE plpgsql;';
                    
-        EXECUTE proc_txt;		
+       EXECUTE proc_txt; -- выполнение запроса
 end 
 $BODY$ LANGUAGE plpgsql;
-
 
 --цикл создает 3 процедуры для каждой таблицы в схеме libraryshema
 do $$
@@ -156,3 +141,24 @@ begin
 	call pr_schema.p_gen_i(l_table_name);	
 	end loop;	
 end $$;
+
+--проверка получившихся процедур
+
+--самые проблемные таблицы:
+-- Post из-за ключевого слова в названии
+-- Author_book из за составного первичного ключа
+
+call pr_schema.p_Post_i(44412,'Главный библиотекарь'); --вставка
+select * from "Post";
+call pr_schema.p_Post_u(8,45500,'иблеограф'); --изменение (сначала первичный ключ)
+select * from "Post";
+call pr_schema.p_post_d(8); --удаление
+select * from "Post";
+
+
+call pr_schema.p_author_book_i(8,54); --вставка
+select * from author_book;
+call pr_schema.p_author_book_u(8,54,8,55); --изменение (сначала первичный ключ из 2 значений)
+select * from author_book;
+call pr_schema.p_author_book_d(8,55); --удаление
+select * from author_book;
