@@ -24,7 +24,6 @@ where
  AND indisprimary;
  
 select * from temp_primal_keys;
-drop table temp_primal_keys;
 
 --создать отдельную схему где будут хранится процедуры
 do $$
