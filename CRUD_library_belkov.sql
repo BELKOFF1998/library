@@ -1,29 +1,29 @@
 --создание временной таблицы для использования в генеративных процедурах
 --таблица хранит название колонки с первичным ключем и его тип данных для каждой таблицы
 -- так же хранит строку с названиями колонок которые будут изменятся значения которых передаются в параметры процедур insert и update
-create temp table temp_primal_keys as
+create view v_temp_primal_keys as
 with t_columns as(
 SELECT table_name,STRING_AGG(column_name,', ')
  FROM information_schema.columns
- where is_identity = 'NO'
- group by  information_schema.columns.table_name
+ where is_identity = 'NO' and
+ table_schema = 'libraryshema'
+ group by table_name
  )
 SELECT   
   btrim(pg_class.oid::regclass||'','"') as oid,
   pg_attribute.attname, 
   format_type(pg_attribute.atttypid, pg_attribute.atttypmod),
   string_agg
-FROM pg_index, pg_class, pg_attribute, pg_namespace,t_columns 
-where
-  t_columns.table_name::text = btrim(pg_class.oid::regclass||'','"') and
-  indrelid = pg_class.oid AND 
-  nspname = 'libraryshema' AND 
-  pg_class.relnamespace = pg_namespace.oid AND 
-  pg_attribute.attrelid = pg_class.oid AND 
+FROM pg_class
+join pg_index on  indrelid = pg_class.oid
+join pg_attribute on pg_attribute.attrelid = pg_class.oid
+join pg_namespace on pg_class.relnamespace = pg_namespace.oid
+join t_columns on t_columns.table_name = btrim(pg_class.oid::regclass||'','"')
+where 
   pg_attribute.attnum = any(pg_index.indkey)
- AND indisprimary;
+  AND indisprimary;
  
-select * from temp_primal_keys;
+select * from v_temp_primal_keys;
 
 --создать отдельную схему где будут хранится процедуры
 do $$
@@ -39,11 +39,11 @@ proc_txt text; --текст объявления новой процедуры
 atr_txt text; --список атрибутов для новой процедуры
 where_txt text; -- текст в запросе после WHERE
 begin
-	atr_txt := (select string_agg('at_'||attname||' '||format_type,', ') from temp_primal_keys where  temp_primal_keys.oid = table_name); --текст с названиями ключей таблицы для параметров
+	atr_txt := (select string_agg('at_'||attname||' '||format_type,', ') from v_temp_primal_keys where  v_temp_primal_keys.oid = table_name); --текст с названиями ключей таблицы для параметров
 	
-	where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = table_name limit 1)||' = ''||$1||'''; --текст проверки ключа после where	
-	if ((select count(*) from temp_primal_keys where temp_primal_keys.oid = table_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
-    where_txt := where_txt||' AND '||(select attname from temp_primal_keys where temp_primal_keys.oid = table_name limit 1 offset 1)||' = ''||$2||'''; --в where добавляется приверка второго ключа
+	where_txt := (select attname from v_temp_primal_keys where v_temp_primal_keys.oid = table_name limit 1)||' = ''||$1||'''; --текст проверки ключа после where	
+	if ((select count(*) from v_temp_primal_keys where v_temp_primal_keys.oid = table_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
+    where_txt := where_txt||' AND '||(select attname from v_temp_primal_keys where v_temp_primal_keys.oid = table_name limit 1 offset 1)||' = ''||$2||'''; --в where добавляется приверка второго ключа
 	end if;
 
 	proc_txt := 'CREATE OR REPLACE PROCEDURE pr_schema.p_'||table_name||'_d('||atr_txt||') AS    
@@ -105,12 +105,12 @@ begin
 	l_columns :=  (select STRING_AGG(column_name,', ') FROM information_schema.columns
 	                where information_schema.columns.table_name = t_name and is_identity = 'NO'); --строка с перечислением названия колонки через запятую      
 	         
-	atr_txt := (select string_AGG('p_'||attname||' '||format_type||', ','') from temp_primal_keys where temp_primal_keys.oid = t_name)||atr_txt; --добавляет к списку аргументов названия первичных ключей
+	atr_txt := (select string_AGG('p_'||attname||' '||format_type||', ','') from v_temp_primal_keys where v_temp_primal_keys.oid = t_name)||atr_txt; --добавляет к списку аргументов названия первичных ключей
 
-	where_txt := (select attname from temp_primal_keys where temp_primal_keys.oid = t_name limit 1)||' = $1'; --текст проверки ключа после where
+	where_txt := (select attname from v_temp_primal_keys where v_temp_primal_keys.oid = t_name limit 1)||' = $1'; --текст проверки ключа после where
 
-	if ((select count(*) from temp_primal_keys where temp_primal_keys.oid = t_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
-    where_txt := where_txt||' AND '||(select attname from temp_primal_keys where temp_primal_keys.oid = t_name limit 1 offset 1)||' = $2'; --в where добавляется приверка второго ключа
+	if ((select count(*) from v_temp_primal_keys where v_temp_primal_keys.oid = t_name)::int = 2) then                                      --если в таблице ключ из 2 значений то 
+    where_txt := where_txt||' AND '||(select attname from v_temp_primal_keys where v_temp_primal_keys.oid = t_name limit 1 offset 1)||' = $2'; --в where добавляется приверка второго ключа
 	end if;
 	
 		proc_txt := 'CREATE OR REPLACE PROCEDURE pr_schema.p_'||t_name||'_u('||atr_txt||') AS    

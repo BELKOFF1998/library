@@ -1,16 +1,18 @@
 --1) Вывести все наименования книг, которые должны вернуть в условный день N.
 -- N - в формате даты
-create function books_return(in N date, out varchar(50))
-AS
-'select book_name from book_list
+create function f_books_return(in N date) returns setof varchar
+as
+$$
+select book_name from book_list
 join
-book ON book.id_book = book_list.id_book where book_list.return_data = N'
+book ON book.id_book = book_list.id_book where book_list.return_data = N;
+$$
 language SQL;
 
 --посмотреть все даты для книг
 --select * from book_list;
 
-select books_return('2015-04-26');
+select f_books_return('2009-11-30');
 
 -- 2) вывести все книги из Book, которые брали в библиотеке больше одного раза, и у которых 1 автор.
 select book_name as название_книги, A1.reserved_count as количество_записей, A2.author_count as количество_авторов  from (
@@ -29,7 +31,7 @@ select book_name as название_книги, A1.reserved_count as колич
 
 
 --3) найти Имя Employee для записи из record по конкретному Visitor на конкретный день, где паспорт Visitor = M.
-create function employee_of(in N varchar, in M varchar, in D date, out varchar)
+create function f_employee_of(in N varchar, in M varchar, in D date, out varchar)
 as
 'select first_name as имя_сотрудника from person
 where id_person =
@@ -48,7 +50,7 @@ person on record.id_visitor = person.id_person
 join
 pasport_details on pasport_details.id_pasport = person.id_pasport;
 
-select employee_of('6048','21-18','2010-02-08');
+select f_employee_of('6048','21-18','2010-02-08');
 
 
 --4) в таблице author для каждой страны вывести самого младшего и самого старшего автора (использовать аналитические функции)
